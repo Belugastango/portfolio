@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple Liquid Glass Floating Navigation Bar — Component Showcase</title>
+  <meta name="description" content="A modern, floating top navigation bar component using Apple's Liquid Glass design language with backdrop-filter, multi-layer specular highlights, and fluid physics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* ==========================================================================
+       APPLE LIQUID GLASS FLOATING NAVIGATION BAR COMPONENT
+       Design System & Tokens
+       ========================================================================== */
+    :root {
+      --liquid-bg-dark: rgba(26, 28, 32, 0.65);
+      --liquid-bg-light: rgba(255, 255, 255, 0.72);
+      --liquid-blur: 24px;
+      --liquid-saturate: 180%;
+      
+      --specular-rim: rgba(255, 255, 255, 0.55);
+      --specular-subtle: rgba(255, 255, 255, 0.16);
+      --specular-shadow: rgba(0, 0, 0, 0.45);
+      
+      --ease-apple: cubic-bezier(0.16, 1, 0.3, 1);
+      --duration-snappy: 0.35s;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      background-color: #121316;
+      color: #ffffff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+    }
+
+    /* Ambient background refraction scene (matching reference image) */
+    .ambient-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .ambient-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.75;
+      animation: pulseGlow 10s infinite alternate ease-in-out;
+    }
+
+    .glow-green {
+      width: 480px;
+      height: 380px;
+      background: radial-gradient(circle, #22c55e 0%, #15803d 40%, transparent 70%);
+      top: 180px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .glow-blue {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, #3b82f6 0%, #1d4ed8 45%, transparent 75%);
+      top: 450px;
+      left: 20%;
+      opacity: 0.35;
+    }
+
+    .glow-purple {
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, #a855f7 0%, #7e22ce 45%, transparent 75%);
+      top: 500px;
+      right: 20%;
+      opacity: 0.3;
+    }
+
+    @keyframes pulseGlow {
+      0% { transform: translateX(-50%) scale(0.95); opacity: 0.65; }
+      100% { transform: translateX(-50%) scale(1.15); opacity: 0.85; }
+    }
+
+    /* Background grid lines for depth refraction */
+    .background-grid {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* ==========================================================================
+       THE APPLE LIQUID GLASS FLOATING NAV BAR COMPONENT
+       ========================================================================== */
+    .liquid-nav-wrapper {
+      position: sticky;
+      top: 2rem;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2.5rem;
+      margin-inline: auto;
+      max-width: fit-content;
+      user-select: none;
+    }
+
+    /* Outer Liquid Glass Shell (Floating Pill Shape, border-radius: 32px) */
+    .liquid-glass-shell {
+      position: relative;
+      border-radius: 32px;
+      padding: 14px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      
+      /* High-performance background blur + ultra-low opacity tint */
+      background: var(--liquid-bg-dark);
+      backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
+      -webkit-backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
+
+      /* Multi-layer borders: hairline white rim + outer shadow edge */
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      
+      /* Sharp top inset specular rim + physical depth drop shadows */
+      box-shadow:
+        inset 0 1.5px 1.5px 0 var(--specular-rim),
+        inset 0 -1px 1px 0 rgba(0, 0, 0, 0.4),
+        0 24px 48px -12px var(--specular-shadow),
+        0 8px 20px -4px rgba(0, 0, 0, 0.35);
+
+      transition: transform var(--duration-snappy) var(--ease-apple),
+                  box-shadow var(--duration-snappy) var(--ease-apple),
+                  background var(--duration-snappy) var(--ease-apple);
+    }
+
+    .liquid-glass-shell:hover {
+      transform: translateY(-2px) scale(1.008);
+      box-shadow:
+        inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.7),
+        inset 0 -1px 1px 0 rgba(0, 0, 0, 0.45),
+        0 32px 56px -12px rgba(0, 0, 0, 0.55),
+        0 12px 24px -4px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Optional Top Action Pill ("Capture" / Quick Action Badge from screenshot) */
+    .liquid-top-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 16px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.35),
+        0 2px 6px rgba(0, 0, 0, 0.25);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.95);
+      text-decoration: none;
+      cursor: pointer;
+      transition: all var(--duration-snappy) var(--ease-apple);
+    }
+
+    .liquid-top-badge:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: rgba(255, 255, 255, 0.35);
+      transform: translateY(-1px);
+      box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.6),
+        0 4px 12px rgba(0, 0, 0, 0.35);
+    }
+
+    .liquid-top-badge svg {
+      width: 15px;
+      height: 15px;
+      stroke-width: 2.2;
+    }
+
+    /* Inner Glass Navigation Track */
+    .liquid-nav-track {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 24px;
+      padding: 4px;
+      background: rgba(0, 0, 0, 0.22);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Navigation Items */
+    .liquid-nav-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      min-width: 82px;
+      height: 74px;
+      padding: 10px 14px;
+      border-radius: 20px;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.65);
+      transition: color var(--duration-snappy) var(--ease-apple),
+                  transform var(--duration-snappy) var(--ease-apple);
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    .liquid-nav-item svg {
+      width: 22px;
+      height: 22px;
+      stroke-width: 1.9;
+      transition: transform var(--duration-snappy) var(--ease-apple),
+                  stroke var(--duration-snappy) var(--ease-apple);
+    }
+
+    .liquid-nav-item span {
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .liquid-nav-item:hover {
+      color: rgba(255, 255, 255, 0.95);
+      transform: translateY(-1px);
+    }
+
+    .liquid-nav-item:hover svg {
+      transform: scale(1.08);
+      stroke: #ffffff;
+    }
+
+    /* ACTIVE ITEM: The 3D Convex Refractive Pebble (from reference image) */
+    .liquid-nav-item.active {
+      color: #ffffff;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.04) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      
+      /* Intense 3D convex light rim reflections */
+      box-shadow:
+        inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.85),
+        inset 1.5px 0 2px 0 rgba(255, 255, 255, 0.35),
+        inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.4),
+        0 10px 22px -4px rgba(0, 0, 0, 0.5);
+    }
+
+    .liquid-nav-item.active svg {
+      fill: rgba(255, 255, 255, 0.9);
+      stroke: #ffffff;
+      filter: drop-shadow(0 2px 6px rgba(255, 255, 255, 0.35));
+    }
+
+    /* Notification dot on Feed */
+    .nav-badge-dot {
+      position: absolute;
+      top: 10px;
+      right: 22px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #38bdf8;
+      box-shadow: 0 0 8px #38bdf8;
+    }
+
+    /* ==========================================================================
+       DEMO CONTROLS & CODE PREVIEW SECTION
+       ========================================================================== */
+    .demo-content {
+      position: relative;
+      z-index: 10;
+      max-width: 900px;
+      width: 100%;
+      margin: 4.5rem auto 3rem;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .demo-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 2rem;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .demo-card h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .demo-card p {
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .spec-box {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 1.2rem;
+    }
+
+    .spec-box h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #38bdf8;
+      margin-bottom: 0.4rem;
+    }
+
+    .spec-box code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.06);
+      padding: 2px 6px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    /* Theme Switcher for Demo */
+    .controls-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .btn-toggle {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-toggle:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .btn-toggle.active {
+      background: #ffffff;
+      color: #000000;
+      border-color: #ffffff;
+    }
+
+    /* Light Mode Variant */
+    body.light-theme {
+      background-color: #f5f5f7;
+      color: #1d1d1f;
+    }
+
+    body.light-theme .ambient-glow.glow-green {
+      background: radial-gradient(circle, #86efac 0%, #4ade80 40%, transparent 70%);
+      opacity: 0.45;
+    }
+
+    body.light-theme .background-grid {
+      background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+
+    body.light-theme .liquid-glass-shell {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      box-shadow:
+        inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 1),
+        inset 0 -1px 1px 0 rgba(0, 0, 0, 0.06),
+        0 24px 48px -12px rgba(0, 0, 0, 0.12),
+        0 8px 20px -4px rgba(0, 0, 0, 0.06);
+    }
+
+    body.light-theme .liquid-top-badge {
+      background: rgba(0, 0, 0, 0.05);
+      border-color: rgba(0, 0, 0, 0.08);
+      color: #1d1d1f;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8), 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    body.light-theme .liquid-nav-track {
+      background: rgba(0, 0, 0, 0.04);
+      border-color: rgba(0, 0, 0, 0.04);
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+    }
+
+    body.light-theme .liquid-nav-item {
+      color: #6e6e73;
+    }
+
+    body.light-theme .liquid-nav-item:hover {
+      color: #1d1d1f;
+    }
+
+    body.light-theme .liquid-nav-item.active {
+      color: #1d1d1f;
+      background: #ffffff;
+      border-color: rgba(0, 0, 0, 0.08);
+      box-shadow:
+        inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 1),
+        0 8px 18px -4px rgba(0, 0, 0, 0.12);
+    }
+
+    body.light-theme .liquid-nav-item.active svg {
+      fill: #1d1d1f;
+      stroke: #1d1d1f;
+      filter: none;
+    }
+
+    body.light-theme .demo-card {
+      background: rgba(255, 255, 255, 0.8);
+      border-color: rgba(0, 0, 0, 0.08);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    }
+
+    body.light-theme .demo-card h2 { color: #1d1d1f; }
+    body.light-theme .demo-card p { color: #6e6e73; }
+    body.light-theme .spec-box {
+      background: rgba(0, 0, 0, 0.02);
+      border-color: rgba(0, 0, 0, 0.06);
+    }
+    body.light-theme .spec-box code {
+      background: rgba(0, 0, 0, 0.06);
+      color: #1d1d1f;
+    }
+
+    /* Code block */
+    pre {
+      background: #0d1117;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 1.25rem;
+      overflow-x: auto;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: #e6edf3;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Refraction Backdrop (matching user's uploaded screenshot) -->
+  <div class="ambient-canvas" aria-hidden="true">
+    <div class="background-grid"></div>
+    <div class="ambient-glow glow-green"></div>
+    <div class="ambient-glow glow-blue"></div>
+    <div class="ambient-glow glow-purple"></div>
+  </div>
+
+  <!-- ==========================================================================
+       APPLE LIQUID GLASS FLOATING NAVIGATION BAR (Key Criteria Implemented)
+       ========================================================================== -->
+  <div class="liquid-nav-wrapper">
+    <nav class="liquid-glass-shell" id="liquid-nav" role="navigation" aria-label="Main Navigation">
+      
+      <!-- Top Pill Action / Status (from screenshot: "Capture") -->
+      <a href="#capture" class="liquid-top-badge" id="top-badge">
+        <i data-lucide="camera"></i>
+        <span>Capture</span>
+      </a>
+
+      <!-- Bottom Segmented Navigation Track -->
+      <div class="liquid-nav-track">
+        
+        <!-- Home (Active Bulbous Pebble) -->
+        <a href="#home" class="liquid-nav-item active" data-nav="home">
+          <i data-lucide="home"></i>
+          <span>Home</span>
+        </a>
+
+        <!-- Feed (with notification dot) -->
+        <a href="#feed" class="liquid-nav-item" data-nav="feed">
+          <span class="nav-badge-dot"></span>
+          <i data-lucide="newspaper"></i>
+          <span>Feed</span>
+        </a>
+
+        <!-- Search -->
+        <a href="#search" class="liquid-nav-item" data-nav="search">
+          <i data-lucide="search"></i>
+          <span>Search</span>
+        </a>
+
+        <!-- Settings -->
+        <a href="#settings" class="liquid-nav-item" data-nav="settings">
+          <i data-lucide="settings"></i>
+          <span>Settings</span>
+        </a>
+
+      </div>
+    </nav>
+  </div>
+
+  <!-- 3-ITEM MINIMAL APPLE LIQUID GLASS PILL (From Screenshot 2: Home, About, Projects) -->
+  <div style="margin-top: 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; z-index: 10;">
+    <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.6); font-weight: 700;">Top-Right 3-Item Pill (Matching Screenshot 2)</span>
+    <nav class="pill-3-items" id="pill-3-items" style="
+      position: relative;
+      display: flex;
+      align-items: center;
+      background: rgba(247, 245, 239, 0.88);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      border: 1px solid rgba(225, 222, 212, 0.75);
+      border-radius: 20px;
+      padding: 6px 7px;
+      box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.95), 0 12px 28px -6px rgba(0, 0, 0, 0.15);
+      gap: 4px;
+    ">
+      <a href="#home" class="pill-item active" style="
+        padding: 8px 20px;
+        border-radius: 12px;
+        background: rgba(226, 222, 210, 0.8);
+        border: 1px solid rgba(215, 210, 196, 0.85);
+        box-shadow: inset 0 1.5px 2px rgba(255, 255, 255, 0.95), inset 0 -1px 2px rgba(0, 0, 0, 0.05);
+        color: #0a4c7e;
+        font-weight: 700;
+        font-size: 1.05rem;
+        text-decoration: none;
+        transition: all 0.25s ease;
+      ">Home</a>
+      <a href="#about" class="pill-item" style="
+        padding: 8px 18px;
+        border-radius: 12px;
+        color: #0a4c7e;
+        font-weight: 600;
+        font-size: 1.05rem;
+        text-decoration: none;
+        transition: all 0.25s ease;
+      ">About</a>
+      <a href="#projects" class="pill-item" style="
+        padding: 8px 18px;
+        border-radius: 12px;
+        color: #0a4c7e;
+        font-weight: 600;
+        font-size: 1.05rem;
+        text-decoration: none;
+        transition: all 0.25s ease;
+      ">Projects</a>
+    </nav>
+  </div>
+
+  <!-- Showcase Details & Controls -->
+  <main class="demo-content">
+    <div class="demo-card">
+      <h2><i data-lucide="sparkles" style="color: #38bdf8;"></i> Apple Liquid Glass Navigation Specs</h2>
+      <p>
+        Engineered precisely to the user's specification and reference photograph. This component showcases 
+        Apple's Liquid Glass material physics with high-performance backdrop filtering, dual specular light rims, 
+        and an active 3D convex refractive pebble.
+      </p>
+
+      <div class="controls-row">
+        <button class="btn-toggle active" id="btn-theme-dark">
+          <i data-lucide="moon"></i> Dark Glass (Screenshot Match)
+        </button>
+        <button class="btn-toggle" id="btn-theme-light">
+          <i data-lucide="sun"></i> Light Translucent Glass
+        </button>
+        <a href="/" class="btn-toggle" style="text-decoration:none; margin-left:auto;">
+          <i data-lucide="arrow-left"></i> Back to Divine Interiors Site
+        </a>
+      </div>
+
+      <div class="spec-grid">
+        <div class="spec-box">
+          <h3>1. Geometry</h3>
+          <p>Floating pill shape centered horizontally with viewport top offset.</p>
+          <code>border-radius: 32px;</code>
+        </div>
+        <div class="spec-box">
+          <h3>2. Material</h3>
+          <p>GPU-accelerated backdrop blur with ultra-low-opacity tint.</p>
+          <code>backdrop-filter: blur(20px) saturate(180%);</code>
+        </div>
+        <div class="spec-box">
+          <h3>3. Specular Highlights</h3>
+          <p>Multi-layer hairline stroke + sharp top inset box-shadow.</p>
+          <code>inset 0 1.5px 1.5px 0 rgba(255,255,255,0.55);</code>
+        </div>
+        <div class="spec-box">
+          <h3>4. Motion Physics</h3>
+          <p>Smooth spring-based scale & translate transitions on hover and click.</p>
+          <code>cubic-bezier(0.16, 1, 0.3, 1);</code>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ready-to-use Code Block -->
+    <div class="demo-card">
+      <h2><i data-lucide="code" style="color: #4ade80;"></i> Tailwind CSS & Clean CSS Implementation</h2>
+      <p>You can drop this snippet into any portfolio project directly:</p>
+
+      <pre><code>/* Pure CSS Apple Liquid Glass Pill */
+.liquid-glass-shell {
+  border-radius: 32px;
+  background: rgba(26, 28, 32, 0.65);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.4),
+    0 24px 48px -12px rgba(0, 0, 0, 0.45);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Tailwind Equivalent */
+&lt;nav class="rounded-[32px] bg-neutral-900/65 backdrop-blur-[20px] backdrop-saturate-[180%] 
+            border border-white/20 shadow-[inset_0_1.5px_1.5px_0_rgba(255,255,255,0.55),0_24px_48px_-12px_rgba(0,0,0,0.45)] 
+            transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5"&gt;
+  ...
+&lt;/nav&gt;</code></pre>
+    </div>
+  </main>
+
+  <script>
+    // Initialize icons
+    lucide.createIcons();
+
+    // Interactive active state toggle for navigation items
+    const navItems = document.querySelectorAll('.liquid-nav-item');
+    navItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        navItems.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+      });
+    });
+
+    // Interactive active state toggle for 3-item pill
+    const pillItems = document.querySelectorAll('.pill-item');
+    pillItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        pillItems.forEach(p => {
+          p.classList.remove('active');
+          p.style.background = 'transparent';
+          p.style.border = 'none';
+          p.style.boxShadow = 'none';
+          p.style.fontWeight = '600';
+        });
+        item.classList.add('active');
+        item.style.background = 'rgba(226, 222, 210, 0.8)';
+        item.style.border = '1px solid rgba(215, 210, 196, 0.85)';
+        item.style.boxShadow = 'inset 0 1.5px 2px rgba(255, 255, 255, 0.95), inset 0 -1px 2px rgba(0, 0, 0, 0.05)';
+        item.style.fontWeight = '700';
+      });
+    });
+    // Theme toggles
+    const btnDark = document.getElementById('btn-theme-dark');
+    const btnLight = document.getElementById('btn-theme-light');
+
+    btnDark.addEventListener('click', () => {
+      document.body.classList.remove('light-theme');
+      btnDark.classList.add('active');
+      btnLight.classList.remove('active');
+    });
+
+    btnLight.addEventListener('click', () => {
+      document.body.classList.add('light-theme');
+      btnLight.classList.add('active');
+      btnDark.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

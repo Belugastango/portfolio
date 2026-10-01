@@ -1,0 +1,895 @@
+[
+  {
+    "title": "GoGiGi",
+    "categories": [
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2026/08/GoodGudi.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/gogigi/",
+    "local_image": "assets/projects/project_01_GoodGudi.jpg"
+  },
+  {
+    "title": "Neeru's",
+    "categories": [
+      "FASHION & LIFESTYLE",
+      "Regional Retail"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2026/04/Neerus-Vizag.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/neerus/",
+    "local_image": "assets/projects/project_02_Neerus-Vizag.jpg"
+  },
+  {
+    "title": "Hettich",
+    "categories": [
+      "EXPERIENCE CENTERS",
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2026/03/Hettich-Experience-Centre.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/hettich/",
+    "local_image": "assets/projects/project_03_Hettich-Experience-Centre.jpg"
+  },
+  {
+    "title": "Frido",
+    "categories": [
+      "EXPERIENCE CENTERS",
+      "WELLNESS & BEAUTY"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2026/02/Frido-Pune.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/frido/",
+    "local_image": "assets/projects/project_04_Frido-Pune.jpg"
+  },
+  {
+    "title": "Somany Atelier",
+    "categories": [
+      "EXPERIENCE CENTERS",
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2025/12/Somany-Atelier.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/somany-atelier/",
+    "local_image": "assets/projects/project_05_Somany-Atelier.jpg"
+  },
+  {
+    "title": "JUICY COUTURE",
+    "categories": [
+      "FASHION ACC & JEWELLERY"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2025/11/Juicy-Couture.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/juicy-couture/",
+    "local_image": "assets/projects/project_06_Juicy-Couture.jpg"
+  },
+  {
+    "title": "Home Essentials",
+    "categories": [
+      "EXPERIENCE CENTERS",
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2025/11/Home-Essentials-Retail-Store-Design.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/home-essentials/",
+    "local_image": "assets/projects/project_07_Home-Essentials-Retail-Store-Design.jpg"
+  },
+  {
+    "title": "BAGLINE",
+    "categories": [
+      "FASHION ACC & JEWELLERY"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2025/11/Bagline-Retail-Design.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/bagline/",
+    "local_image": "assets/projects/project_08_Bagline-Retail-Design.jpg"
+  },
+  {
+    "title": "Naidu Hall",
+    "categories": [
+      "FASHION & LIFESTYLE",
+      "Regional Retail"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2025/09/Naidu-Hall.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/naidu-hall/",
+    "local_image": "assets/projects/project_09_Naidu-Hall.jpg"
+  },
+  {
+    "title": "JSW ONE HOME STUDIO",
+    "categories": [
+      "EXPERIENCE CENTERS",
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2025/08/JSW-One-Homes.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/jsw-one-home-studio/",
+    "local_image": "assets/projects/project_10_JSW-One-Homes.jpg"
+  },
+  {
+    "title": "Red Chief",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2025/08/Red-Chief-Store-Design.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/red-chief-retail-design/",
+    "local_image": "assets/projects/project_11_Red-Chief-Store-Design.jpg"
+  },
+  {
+    "title": "MOKOBARA, DLF",
+    "categories": [
+      "FASHION ACC & JEWELLERY"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2025/07/Mokobara-DLF-Cyber-City.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/mokobara-dlf/",
+    "local_image": "assets/projects/project_12_Mokobara-DLF-Cyber-City.jpg"
+  },
+  {
+    "title": "MOKOBARA, Mumbai",
+    "categories": [
+      "FASHION ACC & JEWELLERY"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2025/06/Mokobara-Mumbai.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/mokobara-mumbai/",
+    "local_image": "assets/projects/project_13_Mokobara-Mumbai.jpg"
+  },
+  {
+    "title": "Petals",
+    "categories": [
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2025/05/Petals-Furnishing.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/petals/",
+    "local_image": "assets/projects/project_14_Petals-Furnishing.jpg"
+  },
+  {
+    "title": "PLUS LIGHT TECH",
+    "categories": [
+      "ELECTRONICS, CDIT & TRANSPORTATION"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2025/04/plus-light-tech.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/plus-light-tech/",
+    "local_image": "assets/projects/project_15_plus-light-tech.jpg"
+  },
+  {
+    "title": "TVS EUROGRIP",
+    "categories": [
+      "ELECTRONICS, CDIT & TRANSPORTATION"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2025/03/TVS-Eurogrip-Ahmedabad.webp",
+    "link": "https://www.4dimensions.co.in/portfolio-item/tvs-eurogrip/",
+    "local_image": "assets/projects/project_16_TVS-Eurogrip-Ahmedabad.webp"
+  },
+  {
+    "title": "ADYAAYE",
+    "categories": [
+      "FASHION & LIFESTYLE",
+      "Regional Retail"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2025/03/Adyaaye-Retail-Store.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/adyaaye/",
+    "local_image": "assets/projects/project_17_Adyaaye-Retail-Store.jpg"
+  },
+  {
+    "title": "HINDWARE EXPERIENCE CENTER",
+    "categories": [
+      "ELECTRONICS, CDIT & TRANSPORTATION",
+      "EXPERIENCE CENTERS"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2025/03/Hindware-Experience-Center-Delhi.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/hindware-experience-center/",
+    "local_image": "assets/projects/project_18_Hindware-Experience-Center-Delhi.jpg"
+  },
+  {
+    "title": "TURTLE",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2025/02/Turtle.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/turtle/",
+    "local_image": "assets/projects/project_19_Turtle.jpg"
+  },
+  {
+    "title": "DAMENSCH",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2025/01/DaMensch.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/damensch/",
+    "local_image": "assets/projects/project_20_DaMensch.jpg"
+  },
+  {
+    "title": "SLEEPYHEAD",
+    "categories": [
+      "EXPERIENCE CENTERS",
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2024/11/Sleepyhead-Thumbnail.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/sleepyhead/",
+    "local_image": "assets/projects/project_21_Sleepyhead-Thumbnail.jpg"
+  },
+  {
+    "title": "TECHNOSPORT",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2024/10/Technosport-Thumbnail.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/technosport/",
+    "local_image": "assets/projects/project_22_Technosport-Thumbnail.jpg"
+  },
+  {
+    "title": "AGARO",
+    "categories": [
+      "ELECTRONICS, CDIT & TRANSPORTATION"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2024/08/AGARO-Thumbnail.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/agaro/",
+    "local_image": "assets/projects/project_23_AGARO-Thumbnail.jpg"
+  },
+  {
+    "title": "TIM HORTONS",
+    "categories": [
+      "SPECIALTY FOODS & DINING"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2024/06/Tim-Hortons-Thumbnail.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/tim-hortons/",
+    "local_image": "assets/projects/project_24_Tim-Hortons-Thumbnail.jpg"
+  },
+  {
+    "title": "RAAYA",
+    "categories": [
+      "FASHION & LIFESTYLE",
+      "Regional Retail"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2024/06/Raaya-Thumbnail.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/raaya/",
+    "local_image": "assets/projects/project_25_Raaya-Thumbnail.jpg"
+  },
+  {
+    "title": "MAMAEARTH",
+    "categories": [
+      "WELLNESS & BEAUTY"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2024/04/Mamaearth-Thumbnail2.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/mamaearth/"
+  },
+  {
+    "title": "Havells",
+    "categories": [
+      "ELECTRONICS, CDIT & TRANSPORTATION"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2024/03/Havells-Thumb2.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/havells/"
+  },
+  {
+    "title": "MYSORE SAREE UDYOG",
+    "categories": [
+      "Regional Retail"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2024/02/Mysore-Saree-Udyog-Thumbnail.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/mysore-saree-udyog/"
+  },
+  {
+    "title": "BREAKBOUNCE",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2024/01/Breakbounce-Thumbnail2.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/breakbounce/"
+  },
+  {
+    "title": "VALUE ZONE HYPER MART",
+    "categories": [
+      "Regional Retail"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2024/01/Value-Zone-Thumbnail2.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/value-zone-hyper-mart/"
+  },
+  {
+    "title": "WILDCRAFT",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2023/11/Wildcraft-Thumbnail2.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/wildcraft-2/"
+  },
+  {
+    "title": "KAFE 57",
+    "categories": [
+      "SPECIALTY FOODS & DINING"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2023/11/Kafe57-Thumbnail2.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/kafe-57/"
+  },
+  {
+    "title": "NARAYANI SILKS",
+    "categories": [
+      "Regional Retail"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2023/11/Narayani-SIlks-Thumbnail2.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/narayani-silks/"
+  },
+  {
+    "title": "MOKOBARA",
+    "categories": [
+      "FASHION ACC & JEWELLERY"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2023/08/Mokobara-Thumbnail2.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/mokobara/"
+  },
+  {
+    "title": "VAN HEUSEN",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2023/08/VanHeusen-Thumbnail2.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/van-heusen-indiranagar/"
+  },
+  {
+    "title": "BAAZAR KOLKATA",
+    "categories": [
+      "FASHION & LIFESTYLE",
+      "Regional Retail"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2023/03/Baazar-Kolkata-Thumbnail.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/baazar-kolkata/"
+  },
+  {
+    "title": "AROMAS OF BIRIYANI",
+    "categories": [
+      "Regional Retail",
+      "SPECIALTY FOODS & DINING"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2023/01/Aromas-of-Biryani-Thumbnail.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/aromas-of-biriyani/"
+  },
+  {
+    "title": "Hindware Smart Appliances",
+    "categories": [
+      "ELECTRONICS, CDIT & TRANSPORTATION"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2022/12/Hindware-Thumbnail2.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/hindware-smart-appliances/"
+  },
+  {
+    "title": "CENTRO",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2022/12/Centro-Thumbnail2.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/centro/"
+  },
+  {
+    "title": "SUGANDH LOK",
+    "categories": [
+      "Regional Retail",
+      "WELLNESS & BEAUTY"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2022/10/SugandhLok-Thumbnail.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/sugandh-lok/"
+  },
+  {
+    "title": "KISANKRAFT",
+    "categories": [
+      "EXPERIENCE CENTERS"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2022/08/KisanKraft-Thumbnail.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/kisankraft/"
+  },
+  {
+    "title": "W",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2022/07/W-Thumbnail.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/w-2/"
+  },
+  {
+    "title": "WILLIAM PENN",
+    "categories": [
+      "FASHION ACC & JEWELLERY"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2021/09/William-Penn-Thumbnail2.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/william-penn-2/"
+  },
+  {
+    "title": "MI HOME &#8211; 2021",
+    "categories": [
+      "ELECTRONICS, CDIT & TRANSPORTATION",
+      "EXPERIENCE CENTERS"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2021/08/MI.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/mi-home-2021/"
+  },
+  {
+    "title": "SRI KRISHNA SWEETS",
+    "categories": [
+      "Regional Retail",
+      "SPECIALTY FOODS & DINING"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2021/08/Sri-Krishna-Sweets.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/sri-krishna-sweets/"
+  },
+  {
+    "title": "PRESTIGE LIFESTYLE",
+    "categories": [
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2021/08/Prestige-Lifestyle-Thumbnail2.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/prestige-lifestyle/"
+  },
+  {
+    "title": "DUROFLEX",
+    "categories": [
+      "EXPERIENCE CENTERS",
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2021/07/Duroflex-Thumbnail2.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/duroflex/"
+  },
+  {
+    "title": "STUDIO PEPPERFRY",
+    "categories": [
+      "EXPERIENCE CENTERS",
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2021/03/Studio-Pepperfry-Thumbnail.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/studio-pepperfry/"
+  },
+  {
+    "title": "AIS WINDOWS EXPERIENCE CENTER",
+    "categories": [
+      "EXPERIENCE CENTERS",
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2021/03/AIS-Windows-Experience-Centre-Thumbnail.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/ais-windows-experience-center/"
+  },
+  {
+    "title": "SOUTH INDIA SHOPPING MALL",
+    "categories": [
+      "FASHION & LIFESTYLE",
+      "Regional Retail"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2018/08/South-India-Mall.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/south-india-shopping-mall/"
+  },
+  {
+    "title": "ALLEN SOLLY",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2018/07/Allen-Solly.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/allen-solly/"
+  },
+  {
+    "title": "URBAN",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2018/07/Urban-Blackberrys.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/urban/"
+  },
+  {
+    "title": "TYNIMO",
+    "categories": [
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2018/07/Tynimo.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/tynimo/"
+  },
+  {
+    "title": "NEELKANTH JEWELLERS",
+    "categories": [
+      "FASHION ACC & JEWELLERY",
+      "Regional Retail"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2018/06/Neelkanth-Jewellery.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/neelkanth-jewellers/"
+  },
+  {
+    "title": "SPACE",
+    "categories": [
+      "EXPERIENCE CENTERS",
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2018/06/Space-Experience-Center.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/space/"
+  },
+  {
+    "title": "CENTURY PLY",
+    "categories": [
+      "EXPERIENCE CENTERS",
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2018/05/Century-Arena.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/century-ply/"
+  },
+  {
+    "title": "THE BOMBAY STORE",
+    "categories": [
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2018/05/The-Bombay-Store.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/the-bombay-store/"
+  },
+  {
+    "title": "LOGIC DISPLAYS",
+    "categories": [
+      "ELECTRONICS, CDIT & TRANSPORTATION",
+      "EXPERIENCE CENTERS"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2018/05/Logic-Display.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/logic-displays/"
+  },
+  {
+    "title": "MI EXPERIENCE CENTER",
+    "categories": [
+      "ELECTRONICS, CDIT & TRANSPORTATION",
+      "EXPERIENCE CENTERS"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2018/04/MI-Home.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/mi-experience-center/"
+  },
+  {
+    "title": "SPICES INDIA",
+    "categories": [
+      "SPECIALTY FOODS & DINING"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2018/03/SPICES-INDIA.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/spices-india/"
+  },
+  {
+    "title": "BANGALORE CONNECTION 1888",
+    "categories": [
+      "SPECIALTY FOODS & DINING"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2018/03/Bangalore-Connection.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/bangalore-connection-1888/"
+  },
+  {
+    "title": "EAT.FIT",
+    "categories": [
+      "SPECIALTY FOODS & DINING"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2018/03/Eat-Fit.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/eat-fit/"
+  },
+  {
+    "title": "KALMANE KOFFEE",
+    "categories": [
+      "SPECIALTY FOODS & DINING"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2018/03/Kalmane-Koffees.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/kalmane-koffee/"
+  },
+  {
+    "title": "LOTUS",
+    "categories": [
+      "WELLNESS & BEAUTY"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2018/02/Lotus.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/lotus/"
+  },
+  {
+    "title": "Green Apple Pharma",
+    "categories": [
+      "WELLNESS & BEAUTY"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2018/02/Green-Apple-Pharma.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/green-apple-pharma/"
+  },
+  {
+    "title": "ALLEN SOLLY, Bangalore",
+    "categories": [
+      "Design Collaboration"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2018/01/Allen-Solly-Indiranagar.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/allen-solly-2/"
+  },
+  {
+    "title": "PEOPLE",
+    "categories": [
+      "Design Collaboration"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2018/01/People.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/people/"
+  },
+  {
+    "title": "PETER ENGLAND",
+    "categories": [
+      "Design Collaboration"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2018/01/Peter-England.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/peter-england/"
+  },
+  {
+    "title": "BLACKBERRYS",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2017/08/Blackberrys-1.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/blackberrys/"
+  },
+  {
+    "title": "VAN HEUSEN",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2017/08/Van-Heusen.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/van-heusen/"
+  },
+  {
+    "title": "ZALZA TEENS",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2017/08/Zalza-Teens-1.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/zalza-teens/"
+  },
+  {
+    "title": "SIMON CARTER",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2017/07/Simon-Carter.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/simon-carter/"
+  },
+  {
+    "title": "INDIAN TERRAIN",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2017/07/Indian-Terrain.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/indian-terrain/"
+  },
+  {
+    "title": "SPYKAR",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2017/06/Spykar.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/spykar/"
+  },
+  {
+    "title": "PROLINE",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2017/06/Proline.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/proline/"
+  },
+  {
+    "title": "FILA",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2017/06/Fila-9.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/fila/"
+  },
+  {
+    "title": "AND",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2017/05/AND.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/and/"
+  },
+  {
+    "title": "SHOPPERS STOP",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2017/05/Shoppers-Stop-11.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/shoppers-stop/"
+  },
+  {
+    "title": "LOUIS PHILIPPE",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2017/04/Louis-Philippe.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/louis-philippe/"
+  },
+  {
+    "title": "PLANET FASHION",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2017/04/Planet-Fashion.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/planet-fashion/"
+  },
+  {
+    "title": "JEALOUS 21",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2017/04/JEALOUS21.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/jealous-21/"
+  },
+  {
+    "title": "KAZO",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2017/03/KAZO.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/kazo/"
+  },
+  {
+    "title": "BURGOYNE",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2017/03/Burgoyne.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/burgoyne/"
+  },
+  {
+    "title": "FOOBA WOOBA",
+    "categories": [
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2017/02/Fooba-Wooba.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/fooba-wooba/"
+  },
+  {
+    "title": "SRI SAI KANCHI",
+    "categories": [
+      "FASHION & LIFESTYLE",
+      "Regional Retail"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2017/01/Sri-Sai-Kanchi.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/sri-sai-kanchi/"
+  },
+  {
+    "title": "MADURA COATS",
+    "categories": [
+      "EXPERIENCE CENTERS",
+      "FASHION & LIFESTYLE"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2017/01/Madura-Coats.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/madura-coats/"
+  },
+  {
+    "title": "VENTURINI EXPERIENCE CENTER",
+    "categories": [
+      "FASHION ACC & JEWELLERY"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2016/03/Venturini.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/venturini-experience-center/"
+  },
+  {
+    "title": "NEELKANTH BRIDAL LOUNGE",
+    "categories": [
+      "FASHION ACC & JEWELLERY",
+      "Regional Retail"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2016/01/Neelkanth-Bridal-Lounge-ths.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/neelkanth-bridal-lounge/"
+  },
+  {
+    "title": "KETHINI",
+    "categories": [
+      "FASHION ACC & JEWELLERY",
+      "Regional Retail"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2016/02/Kethini.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/kethini/"
+  },
+  {
+    "title": "SNOOZE FROM PEPPERFRY",
+    "categories": [
+      "EXPERIENCE CENTERS",
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2015/04/Snooze-Pepperfry-1.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/snooze-from-pepperfry/"
+  },
+  {
+    "title": "CHUMBAK",
+    "categories": [
+      "FASHION & LIFESTYLE",
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2015/04/Chumbak.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/chumbak/"
+  },
+  {
+    "title": "SOMANY TILES",
+    "categories": [
+      "EXPERIENCE CENTERS",
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2015/03/Somany-1.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/somany-tiles/"
+  },
+  {
+    "title": "TULIPS",
+    "categories": [
+      "EXPERIENCE CENTERS",
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2015/03/Tulips.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/tulips/"
+  },
+  {
+    "title": "HOMELANE.COM",
+    "categories": [
+      "EXPERIENCE CENTERS",
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2015/02/Homelane.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/homelane-com/"
+  },
+  {
+    "title": "BUILD MART",
+    "categories": [
+      "EXPERIENCE CENTERS",
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2015/01/Build-Mart.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/build-mart/"
+  },
+  {
+    "title": "GODREJ INTERIO B2B",
+    "categories": [
+      "EXPERIENCE CENTERS",
+      "HOME IMPROVEMENT"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2015/01/Godrej-Interio.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/godrej-interio-b2b/"
+  },
+  {
+    "title": "OPTI-COAT",
+    "categories": [
+      "ELECTRONICS, CDIT & TRANSPORTATION"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2014/01/Opticoat.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/opti-coat/"
+  },
+  {
+    "title": "CHANNEL 9",
+    "categories": [
+      "ELECTRONICS, CDIT & TRANSPORTATION"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2014/01/Channel-9.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/channel-9/"
+  },
+  {
+    "title": "SANGEETHA MOBILES",
+    "categories": [
+      "ELECTRONICS, CDIT & TRANSPORTATION"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2014/01/Sangeetha.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/sangeetha-mobiles/"
+  },
+  {
+    "title": "BRUGGE",
+    "categories": [
+      "SPECIALTY FOODS & DINING"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2012/02/Brugge.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/brugge/"
+  },
+  {
+    "title": "CULINARIUM",
+    "categories": [
+      "SPECIALTY FOODS & DINING"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2012/01/Cullinarium.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/culinarium/"
+  },
+  {
+    "title": "IRIS",
+    "categories": [
+      "WELLNESS & BEAUTY"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2011/01/Iris.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/iris/"
+  },
+  {
+    "title": "SOLLY JEANS",
+    "categories": [
+      "Design Collaboration"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2010/02/Solly-Jeans-1.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/solly-jeans/"
+  },
+  {
+    "title": "HOME STOP",
+    "categories": [
+      "Design Collaboration"
+    ],
+    "image": "https://www.4dimensions.co.in/wp-content/uploads/2010/02/Home-Stop.jpg",
+    "link": "https://www.4dimensions.co.in/portfolio-item/home-stop/"
+  }
+]
