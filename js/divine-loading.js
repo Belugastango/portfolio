@@ -3,7 +3,9 @@
  * Features:
  * - Real-time progress bar (0% to 100%)
  * - Dynamic CAD pixel measurement coordinate tracker (X / Y)
- * - Progressive illumination of the 10 Divine Interiors architectural execution stages
+ * - Animated "JUST A SEC....."
+ * - High-precision timer that runs smoothly in all tab states (active or background)
+ * - Hard failsafe timeout ensuring screen reveals under 2.4s
  * - Smooth transition to the signature square shutter opening animation on complete
  * - Automatic bypass on direct deep links (#services, #portfolio, #about, #contact)
  */
@@ -33,7 +35,6 @@
     const ruler = document.querySelector('.loading-ruler');
     const titleEl = document.querySelector('.loading-content-title .heading');
 
-    // Make sure loader and ruler are active
     loader.classList.add('active');
     loader.classList.remove('loaded');
     loader.style.display = 'flex';
@@ -50,67 +51,53 @@
     if (loadingProgress) loadingProgress.style.top = '72%';
     if (titleEl) titleEl.textContent = 'JUST A SEC.';
 
-    const tracker = { progress: 0 };
-    const duration = 2.2; // 2.2 seconds: smooth, elegant architectural scan
+    let currentProgress = 0;
+    const totalDuration = 2000; // 2.0 seconds
+    const startTime = Date.now();
+    let finished = false;
 
-    function updateDisplay() {
-      const p = Math.round(tracker.progress);
-      if (percentEl) percentEl.textContent = p;
-      if (progressBar) progressBar.style.width = tracker.progress + '%';
+    function updateDisplay(p) {
+      const pInt = Math.round(p);
+      if (percentEl) percentEl.textContent = pInt;
+      if (progressBar) progressBar.style.width = p + '%';
       if (loadingProgress) {
-        const scanTop = 72 - (tracker.progress / 100) * 25.5;
+        const scanTop = 72 - (p / 100) * 25.5;
         loadingProgress.style.top = scanTop + '%';
       }
 
-      // Update CAD measurement coordinates with realistic architectural layout numbers
       if (coordX) {
-        const xVal = Math.round(1131 + (tracker.progress / 100) * 450 + (Math.sin(tracker.progress * 0.35) * 18));
+        const xVal = Math.round(1131 + (p / 100) * 450 + (Math.sin(p * 0.35) * 18));
         coordX.textContent = xVal;
       }
       if (coordY) {
-        const yVal = Math.round(620 + (tracker.progress / 100) * 270 + (Math.cos(tracker.progress * 0.35) * 14));
+        const yVal = Math.round(620 + (p / 100) * 270 + (Math.cos(p * 0.35) * 14));
         coordY.textContent = yVal;
       }
 
-      // Animate dots in JUST A SEC..... (progressively 1 to 5 dots)
       if (titleEl) {
-        const dotCount = Math.min(5, 1 + Math.floor((tracker.progress / 100) * 5));
+        const dotCount = Math.min(5, 1 + Math.floor((p / 100) * 5));
         titleEl.textContent = 'JUST A SEC' + '.'.repeat(dotCount);
       }
     }
 
     function onLoadingFinished() {
-      tracker.progress = 100;
-      updateDisplay();
+      if (finished) return;
+      finished = true;
+      updateDisplay(100);
 
-      // Brief pause at 100% before shutter transition
       setTimeout(() => {
-        // Prepare shutter lines at center (50%)
         if (typeof window.setShutterPercent === 'function') {
           window.setShutterPercent(50);
         }
 
-        // Fade out loader smoothly
         loader.classList.add('loaded');
-        if (typeof gsap !== 'undefined') {
-          gsap.to(loader, {
-            opacity: 0,
-            duration: 0.45,
-            ease: 'power2.inOut',
-            onComplete: () => {
-              loader.style.display = 'none';
-              loader.style.pointerEvents = 'none';
-            }
-          });
-        } else {
-          loader.style.opacity = '0';
-          setTimeout(() => {
-            loader.style.display = 'none';
-            loader.style.pointerEvents = 'none';
-          }, 450);
-        }
+        loader.style.transition = 'opacity 0.45s ease';
+        loader.style.opacity = '0';
+        setTimeout(() => {
+          loader.style.display = 'none';
+          loader.style.pointerEvents = 'none';
+        }, 450);
 
-        // Trigger the square shutter opening animation outward from 50% to 0%
         setTimeout(() => {
           if (typeof window.playShutterOpen === 'function') {
             window.playShutterOpen();
@@ -121,32 +108,23 @@
       }, 160);
     }
 
-    if (typeof gsap !== 'undefined') {
-      gsap.to(tracker, {
-        progress: 100,
-        duration: duration,
-        ease: 'power1.inOut',
-        onUpdate: updateDisplay,
-        onComplete: onLoadingFinished
-      });
-    } else {
-      let start = null;
-      function step(timestamp) {
-        if (!start) start = timestamp;
-        const elapsed = (timestamp - start) / 1000;
-        tracker.progress = Math.min(100, (elapsed / duration) * 100);
-        updateDisplay();
-        if (tracker.progress < 100) {
-          requestAnimationFrame(step);
-        } else {
-          onLoadingFinished();
-        }
+    const interval = setInterval(() => {
+      const elapsed = Date.now() - startTime;
+      currentProgress = Math.min(100, (elapsed / totalDuration) * 100);
+      updateDisplay(currentProgress);
+      if (currentProgress >= 100) {
+        clearInterval(interval);
+        onLoadingFinished();
       }
-      requestAnimationFrame(step);
-    }
+    }, 25);
+
+    // Hard failsafe timeout
+    setTimeout(() => {
+      clearInterval(interval);
+      onLoadingFinished();
+    }, 2400);
   }
 
-  // Ensure shutter percent is initialized to 0% if bypassed
   if (window.location.hash && window.location.hash !== '#home') {
     if (typeof window.setShutterPercent === 'function') {
       window.setShutterPercent(0);
