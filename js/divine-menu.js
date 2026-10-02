@@ -17,93 +17,83 @@
   }
 
   function playShutterTransition(onClosed, onOpen) {
-    const root = document.documentElement;
-    if (typeof gsap === 'undefined') {
-      if (onClosed) onClosed();
-      if (onOpen) onOpen();
-      return;
-    }
+    const start = Date.now();
+    const halfDuration = 350;
+    let closedDone = false;
 
-    gsap.killTweensOf(root);
-    const shutter = { val: 0 };
     setShutterPercent(0);
+    const timer = setInterval(() => {
+      const elapsed = Date.now() - start;
+      if (elapsed <= halfDuration) {
+        const t = elapsed / halfDuration;
+        const ease = t * t * (3 - 2 * t);
+        setShutterPercent(50 * ease);
+      } else {
+        if (!closedDone) {
+          closedDone = true;
+          setShutterPercent(50);
+          if (onClosed) onClosed();
+        }
+        const t = Math.min(1, (elapsed - halfDuration) / halfDuration);
+        const ease = t * t * (3 - 2 * t);
+        setShutterPercent(50 * (1 - ease));
+        if (t >= 1) {
+          clearInterval(timer);
+          setShutterPercent(0);
+          if (onOpen) onOpen();
+        }
+      }
+    }, 16);
 
-    gsap.timeline()
-      .to(shutter, {
-        val: 50,
-        duration: 0.45,
-        ease: 'power3.inOut',
-        onUpdate: () => {
-          setShutterPercent(shutter.val);
-        }
-      })
-      .call(() => {
-        setShutterPercent(50);
-        if (onClosed) onClosed();
-      })
-      .to(shutter, {
-        val: 0,
-        duration: 0.45,
-        ease: 'power3.inOut',
-        delay: 0.05,
-        onUpdate: () => {
-          setShutterPercent(shutter.val);
-        }
-      })
-      .call(() => {
-        setShutterPercent(0);
-        if (onOpen) onOpen();
-      });
+    setTimeout(() => {
+      clearInterval(timer);
+      if (!closedDone && onClosed) onClosed();
+      setShutterPercent(0);
+      if (onOpen) onOpen();
+    }, 850);
   }
 
   function playShutterClose(onComplete) {
-    const root = document.documentElement;
-    if (typeof gsap === 'undefined') {
+    const start = Date.now();
+    const duration = 350;
+    let done = false;
+    function finish() {
+      if (done) return;
+      done = true;
+      clearInterval(timer);
+      setShutterPercent(50);
       if (onComplete) onComplete();
-      return;
     }
-
-    gsap.killTweensOf(root);
-    const shutter = { val: 0 };
-    setShutterPercent(0);
-    gsap.to(shutter, {
-      val: 50,
-      duration: 0.45,
-      ease: 'power3.inOut',
-      onUpdate: () => {
-        setShutterPercent(shutter.val);
-      },
-      onComplete: () => {
-        setShutterPercent(50);
-        if (onComplete) onComplete();
-      }
-    });
+    const timer = setInterval(() => {
+      const elapsed = Date.now() - start;
+      const t = Math.min(1, elapsed / duration);
+      const ease = t * t * (3 - 2 * t);
+      setShutterPercent(50 * ease);
+      if (t >= 1) finish();
+    }, 16);
+    setTimeout(finish, 450);
   }
 
   function playShutterOpen(onComplete) {
-    const root = document.documentElement;
-    if (typeof gsap === 'undefined') {
+    const start = Date.now();
+    const duration = 500;
+    let done = false;
+    function finish() {
+      if (done) return;
+      done = true;
+      clearInterval(timer);
       setShutterPercent(0);
       if (onComplete) onComplete();
-      return;
     }
-
-    gsap.killTweensOf(root);
-    const shutter = { val: 50 };
     setShutterPercent(50);
-    gsap.to(shutter, {
-      val: 0,
-      duration: 0.55,
-      ease: 'power3.out',
-      delay: 0.04,
-      onUpdate: () => {
-        setShutterPercent(shutter.val);
-      },
-      onComplete: () => {
-        setShutterPercent(0);
-        if (onComplete) onComplete();
-      }
-    });
+    const timer = setInterval(() => {
+      const elapsed = Date.now() - start;
+      const t = Math.min(1, elapsed / duration);
+      const ease = 1 - Math.pow(1 - t, 3);
+      setShutterPercent(50 * (1 - ease));
+      if (t >= 1) finish();
+    }, 16);
+    setTimeout(finish, 650);
   }
 
   // Export to window
