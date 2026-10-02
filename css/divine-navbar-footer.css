@@ -1,0 +1,260 @@
+/* ==========================================================================
+   DIVINE INTERIORS — PERMANENT FIXED NAVBAR, BOTTOM SECTION ENCLOSURE & MAP
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. FIXED NAVBAR & PERMANENT STILL LOGO (NO HIDING, NO MOVEMENT ON SCROLL)
+   -------------------------------------------------------------------------- */
+.header,
+.header.on-hide,
+.header.on-scroll {
+  position: fixed !important;
+  top: 0.8rem !important;
+  left: 0.8rem !important;
+  right: 0.8rem !important;
+  z-index: 10000000 !important;
+  pointer-events: auto !important;
+  transform: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.header-inner,
+.header.on-hide .header-inner,
+.header.on-scroll .header-inner {
+  transform: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: none !important;
+}
+
+/* Divine Interiors logo stays completely still and firmly visible */
+.header-logo,
+.header-logo-inner,
+.header-logo-item,
+.header-logo-item.item-txt,
+.header-logo-txt,
+.header-logo-item.item-txt *,
+.header-logo-item.item-txt .embed-ic,
+.header-logo-item.item-txt span {
+  transform: none !important;
+  transition: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: flex !important;
+}
+
+.header-logo-item.item-txt {
+  width: auto !important;
+  max-width: none !important;
+  white-space: nowrap !important;
+}
+
+.header-logo-txt {
+  white-space: nowrap !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  color: #1a1a1a !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+}
+
+/* Hide symbol icon so full wordmark is displayed */
+.header-logo-item:not(.item-txt) {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Header menu and navigation options remain intact while scrolling */
+.header-menu-wrap,
+.header-menu-inner,
+.header-menu,
+.header-menu-item-wrap,
+.header-menu-item,
+.header-cta-new {
+  transform: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  display: flex !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. ENCLOSE BOTTOM SECTION LEFT BOXES WITH ARCHITECTURAL BORDERS
+   -------------------------------------------------------------------------- */
+.cta-deco {
+  border-left: 1px solid rgba(40, 40, 40, 0.24) !important;
+  border-right: 1px solid rgba(40, 40, 40, 0.24) !important;
+}
+
+.cta-deco-item.item-left {
+  grid-column: 1 / 4 !important;
+  grid-row: 1 / 2 !important;
+  position: relative !important;
+  border-left: 1px solid rgba(40, 40, 40, 0.24) !important;
+}
+
+.cta-deco-item.item-right {
+  grid-column: 10 / -1 !important;
+  grid-row: 1 / 2 !important;
+  position: relative !important;
+  border-right: 1px solid rgba(40, 40, 40, 0.24) !important;
+}
+
+.footer-head,
+.footer-title-wrap,
+.footer-form-wrap {
+  border-left: 1px solid rgba(40, 40, 40, 0.24) !important;
+}
+
+.footer-form-input-wrap {
+  position: relative !important;
+}
+
+.footer-form-input {
+  border-left: 1px solid rgba(40, 40, 40, 0.24) !important;
+}
+
+.footer-copyright-wrap {
+  border-left: 1px solid rgba(40, 40, 40, 0.24) !important;
+  border-bottom: 1px solid rgba(40, 40, 40, 0.24) !important;
+}
+
+.footer-copyright {
+  border-left: 1px solid rgba(40, 40, 40, 0.24) !important;
+  border-bottom: 1px solid rgba(40, 40, 40, 0.24) !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. BOTTOM RIGHT MAP & FULL ARCHITECTURAL GRID ENCLOSURE
+   -------------------------------------------------------------------------- */
+.footer-body {
+  border-right: 1px solid rgba(40, 40, 40, 0.24) !important;
+}
+
+.footer-map-slot {
+  grid-column: 10 / -1 !important;
+  grid-row: 1 / 3 !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  min-height: 360px !important;
+  border-left: 1px solid rgba(40, 40, 40, 0.24) !important;
+  border-right: 1px solid rgba(40, 40, 40, 0.24) !important;
+  background-color: var(--color--paper, #F6F6F2) !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.footer-map-container {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.footer-map-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 10px 16px !important;
+  border-bottom: 1px solid rgba(40, 40, 40, 0.24) !important;
+  background: rgba(246, 246, 242, 0.95) !important;
+  flex-shrink: 0 !important;
+}
+
+.footer-map-header-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.footer-map-dot {
+  display: inline-block !important;
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background-color: #F15534 !important;
+}
+
+.footer-map-title {
+  font-family: 'Geist Mono', Monaco, monospace !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: #282828 !important;
+}
+
+.footer-map-directions {
+  font-family: 'Geist Mono', Monaco, monospace !important;
+  font-size: 11px !important;
+  color: #F15534 !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.footer-map-directions:hover {
+  opacity: 0.8 !important;
+  text-decoration: underline !important;
+}
+
+.footer-map-frame-wrap {
+  position: relative !important;
+  flex: 1 !important;
+  width: 100% !important;
+  min-height: 240px !important;
+  overflow: hidden !important;
+  background: #EFEFEA !important;
+}
+
+.footer-map-frame-wrap iframe {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+  filter: grayscale(80%) contrast(1.08) brightness(0.96) !important;
+  transition: filter 0.35s ease !important;
+}
+
+.footer-map-frame-wrap:hover iframe {
+  filter: grayscale(0%) contrast(1) brightness(1) !important;
+}
+
+.footer-map-footer {
+  padding: 8px 16px !important;
+  border-top: 1px solid rgba(40, 40, 40, 0.24) !important;
+  background: rgba(246, 246, 242, 0.95) !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  font-family: 'Geist Mono', Monaco, monospace !important;
+  font-size: 10px !important;
+  color: rgba(40, 40, 40, 0.65) !important;
+  flex-shrink: 0 !important;
+}
+
+@media screen and (max-width: 991px) {
+  .footer-map-slot {
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+    min-height: 280px !important;
+    border-top: 1px solid rgba(40, 40, 40, 0.24) !important;
+  }
+}

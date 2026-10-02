@@ -1,9 +1,6 @@
 .DS_Store
 *.bak
 scratch/
-*.png
-!assets/**/*.png
 node_modules/
 .vscode/
 .idea/
-heron-ai/

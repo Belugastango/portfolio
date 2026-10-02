@@ -1,0 +1,192 @@
+[
+  {
+    "id": "antony-morato",
+    "name": "ANTONY MORATO",
+    "location": "Retail Flagship",
+    "category": "Retail",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIOKFETgd7kcRG-YFyO79IYYXqXVWHdJwdg6hboHVAOscM7k1C-h4Wpwz3&s=10",
+    "urls": [
+      "https://i.postimg.cc/Hc6DsyB5/Whats-App-Image-2026-10-01-at-23-16-39.jpg",
+      "https://i.postimg.cc/Hc6DsyBS/Whats-App-Image-2026-10-01-at-23-16-40.jpg",
+      "https://i.postimg.cc/xJ6DTzty/Whats-App-Image-2026-10-01-at-23-16-40-(1).jpg",
+      "https://i.postimg.cc/S2gFNMDf/Whats-App-Image-2026-10-01-at-23-16-40-(2).jpg",
+      "https://i.postimg.cc/phsbXFqZ/Whats-App-Image-2026-10-01-at-23-16-40-(3).jpg",
+      "https://i.postimg.cc/zbxZXg07/Whats-App-Image-2026-10-01-at-23-16-40-(4).jpg"
+    ],
+    "local_images": [
+      "assets/portfolio_new/antony-morato_01.jpg",
+      "assets/portfolio_new/antony-morato_02.jpg",
+      "assets/portfolio_new/antony-morato_03.jpg",
+      "assets/portfolio_new/antony-morato_04.jpg",
+      "assets/portfolio_new/antony-morato_05.jpg",
+      "assets/portfolio_new/antony-morato_06.jpg"
+    ]
+  },
+  {
+    "id": "roslyn-cafe",
+    "name": "ROSLYN CAFE",
+    "location": "Rohini, New Delhi",
+    "category": "Hospitality",
+    "logo_text": "ROSLYN CAFE",
+    "urls": [
+      "https://i.postimg.cc/Mn5YLmTm/Whats-App-Image-2026-10-01-at-23-17-26.jpg",
+      "https://i.postimg.cc/tskzcNT6/Whats-App-Image-2026-10-01-at-23-17-26-(1).jpg",
+      "https://i.postimg.cc/G4Kjfx2J/Whats-App-Image-2026-10-01-at-23-17-26-(2).jpg",
+      "https://i.postimg.cc/0znC40QG/Whats-App-Image-2026-10-01-at-23-17-26-(3).jpg",
+      "https://i.postimg.cc/PCyM7QxW/Whats-App-Image-2026-10-01-at-23-17-26-(4).jpg"
+    ],
+    "local_images": [
+      "assets/portfolio_new/roslyn-cafe_01.jpg",
+      "assets/portfolio_new/roslyn-cafe_02.jpg",
+      "assets/portfolio_new/roslyn-cafe_03.jpg",
+      "assets/portfolio_new/roslyn-cafe_04.jpg",
+      "assets/portfolio_new/roslyn-cafe_05.jpg"
+    ]
+  },
+  {
+    "id": "dominos-saket",
+    "name": "DOMINO'S",
+    "location": "Saket, New Delhi",
+    "category": "Hospitality",
+    "urls": [
+      "https://i.postimg.cc/68WrC407/Whats-App-Image-2026-10-01-at-23-18-09.jpg",
+      "https://i.postimg.cc/Jspbx76P/Whats-App-Image-2026-10-01-at-23-18-10.jpg",
+      "https://i.postimg.cc/sMjY5GcY/Whats-App-Image-2026-10-01-at-23-18-10-(1).jpg",
+      "https://i.postimg.cc/Mn9y5ZPt/Whats-App-Image-2026-10-01-at-23-18-10-(10).jpg",
+      "https://i.postimg.cc/NKs6R24m/Whats-App-Image-2026-10-01-at-23-18-10-(2).jpg",
+      "https://i.postimg.cc/Mn671fDy/Whats-App-Image-2026-10-01-at-23-18-10-(3).jpg",
+      "https://i.postimg.cc/G4LFvTQv/Whats-App-Image-2026-10-01-at-23-18-10-(4).jpg",
+      "https://i.postimg.cc/4Yf6pH5W/Whats-App-Image-2026-10-01-at-23-18-10-(5).jpg",
+      "https://i.postimg.cc/87Zh4kKW/Whats-App-Image-2026-10-01-at-23-18-10-(6).jpg",
+      "https://i.postimg.cc/nXF4q9kk/Whats-App-Image-2026-10-01-at-23-18-10-(7).jpg",
+      "https://i.postimg.cc/ZWwrHY7p/Whats-App-Image-2026-10-01-at-23-18-10-(8).jpg",
+      "https://i.postimg.cc/gxgvscSD/Whats-App-Image-2026-10-01-at-23-18-10-(9).jpg"
+    ],
+    "local_images": [
+      "assets/portfolio_new/dominos-saket_01.jpg",
+      "assets/portfolio_new/dominos-saket_02.jpg",
+      "assets/portfolio_new/dominos-saket_03.jpg",
+      "assets/portfolio_new/dominos-saket_04.jpg",
+      "assets/portfolio_new/dominos-saket_05.jpg",
+      "assets/portfolio_new/dominos-saket_06.jpg",
+      "assets/portfolio_new/dominos-saket_07.jpg",
+      "assets/portfolio_new/dominos-saket_08.jpg",
+      "assets/portfolio_new/dominos-saket_09.jpg",
+      "assets/portfolio_new/dominos-saket_10.jpg",
+      "assets/portfolio_new/dominos-saket_11.jpg",
+      "assets/portfolio_new/dominos-saket_12.jpg"
+    ]
+  },
+  {
+    "id": "mango-mumbai",
+    "name": "MANGO",
+    "location": "Phoenix Mall, Mumbai",
+    "category": "Retail",
+    "logo": "https://banner2.cleanpng.com/20180617/kry/aa6b0jo8v.webp",
+    "urls": [
+      "https://i.postimg.cc/ts46sQqD/Whats-App-Image-2026-10-01-at-23-18-59.jpg",
+      "https://i.postimg.cc/ts46sQqx/Whats-App-Image-2026-10-01-at-23-18-59-(1).jpg",
+      "https://i.postimg.cc/qNvKNVJ8/Whats-App-Image-2026-10-01-at-23-18-59-(2).jpg",
+      "https://i.postimg.cc/XrY5rSj9/Whats-App-Image-2026-10-01-at-23-18-59-(3).jpg",
+      "https://i.postimg.cc/yD8RD41h/Whats-App-Image-2026-10-01-at-23-18-59-(4).jpg",
+      "https://i.postimg.cc/gx2hxFzV/Whats-App-Image-2026-10-01-at-23-18-59-(5).jpg",
+      "https://i.postimg.cc/G4mD4wLQ/Whats-App-Image-2026-10-01-at-23-18-59-(6).jpg",
+      "https://i.postimg.cc/DSwGSkv6/Whats-App-Image-2026-10-01-at-23-18-59-(7).jpg"
+    ],
+    "local_images": [
+      "assets/portfolio_new/mango-mumbai_01.jpg",
+      "assets/portfolio_new/mango-mumbai_02.jpg",
+      "assets/portfolio_new/mango-mumbai_03.jpg",
+      "assets/portfolio_new/mango-mumbai_04.jpg",
+      "assets/portfolio_new/mango-mumbai_05.jpg",
+      "assets/portfolio_new/mango-mumbai_06.jpg",
+      "assets/portfolio_new/mango-mumbai_07.jpg",
+      "assets/portfolio_new/mango-mumbai_08.jpg"
+    ]
+  },
+  {
+    "id": "polo-ralph-lauren",
+    "name": "POLO RALPH LAUREN",
+    "location": "Mall of India, Noida",
+    "category": "Retail",
+    "logo": "https://images.seeklogo.com/logo-png/22/1/ralph-lauren-logo-png_seeklogo-227283.png",
+    "urls": [
+      "https://i.postimg.cc/nXrsH429/Whats-App-Image-2026-10-01-at-23-19-51.jpg",
+      "https://i.postimg.cc/3dn45SXh/Whats-App-Image-2026-10-01-at-23-19-51-(1).jpg",
+      "https://i.postimg.cc/7fmG8s3C/Whats-App-Image-2026-10-01-at-23-19-51-(10).jpg",
+      "https://i.postimg.cc/N5p9qJ62/Whats-App-Image-2026-10-01-at-23-19-51-(11).jpg",
+      "https://i.postimg.cc/6yY2JjrG/Whats-App-Image-2026-10-01-at-23-19-51-(12).jpg",
+      "https://i.postimg.cc/xctJDxvL/Whats-App-Image-2026-10-01-at-23-19-51-(13).jpg",
+      "https://i.postimg.cc/0bcMRWYD/Whats-App-Image-2026-10-01-at-23-19-51-(14).jpg",
+      "https://i.postimg.cc/gnNXFSVv/Whats-App-Image-2026-10-01-at-23-19-51-(15).jpg",
+      "https://i.postimg.cc/SJD2FT6f/Whats-App-Image-2026-10-01-at-23-19-51-(16).jpg",
+      "https://i.postimg.cc/NKFyg6D9/Whats-App-Image-2026-10-01-at-23-19-51-(17).jpg",
+      "https://i.postimg.cc/dL4kPH2J/Whats-App-Image-2026-10-01-at-23-19-51-(2).jpg",
+      "https://i.postimg.cc/rKQ0Xn18/Whats-App-Image-2026-10-01-at-23-19-51-(3).jpg",
+      "https://i.postimg.cc/w70y8fXx/Whats-App-Image-2026-10-01-at-23-19-51-(4).jpg",
+      "https://i.postimg.cc/JGPDV6Nr/Whats-App-Image-2026-10-01-at-23-19-51-(5).jpg",
+      "https://i.postimg.cc/kBf631Q5/Whats-App-Image-2026-10-01-at-23-19-51-(6).jpg",
+      "https://i.postimg.cc/CzmBTPG1/Whats-App-Image-2026-10-01-at-23-19-51-(7).jpg",
+      "https://i.postimg.cc/crXgy9RC/Whats-App-Image-2026-10-01-at-23-19-51-(8).jpg",
+      "https://i.postimg.cc/GHq8w7F9/Whats-App-Image-2026-10-01-at-23-19-51-(9).jpg",
+      "https://i.postimg.cc/NKFyg6Db/Whats-App-Image-2026-10-01-at-23-19-52.jpg",
+      "https://i.postimg.cc/zyvLJC7g/Whats-App-Image-2026-10-01-at-23-19-52-(1).jpg",
+      "https://i.postimg.cc/v4T1Qrh5/Whats-App-Image-2026-10-01-at-23-19-52-(2).jpg",
+      "https://i.postimg.cc/jD2WsHcz/Whats-App-Image-2026-10-01-at-23-19-52-(3).jpg",
+      "https://i.postimg.cc/hXvJSLs1/Whats-App-Image-2026-10-01-at-23-19-52-(4).jpg",
+      "https://i.postimg.cc/75hCx39t/Whats-App-Image-2026-10-01-at-23-19-53.jpg"
+    ],
+    "local_images": [
+      "assets/portfolio_new/polo-ralph-lauren_01.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_02.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_03.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_04.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_05.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_06.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_07.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_08.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_09.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_10.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_11.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_12.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_13.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_14.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_15.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_16.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_17.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_18.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_19.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_20.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_21.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_22.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_23.jpg",
+      "assets/portfolio_new/polo-ralph-lauren_24.jpg"
+    ]
+  },
+  {
+    "id": "residence-m3m",
+    "name": "RESIDENCE @ M3M",
+    "location": "M3M, Gurugram",
+    "category": "Residential",
+    "urls": [
+      "https://i.postimg.cc/Z9yLVB9K/Whats-App-Image-2026-10-01-at-23-20-34.jpg",
+      "https://i.postimg.cc/R3nTX63B/Whats-App-Image-2026-10-01-at-23-20-34-(1).jpg",
+      "https://i.postimg.cc/LqZVNYq2/Whats-App-Image-2026-10-01-at-23-20-34-(2).jpg",
+      "https://i.postimg.cc/8FrbtJFT/Whats-App-Image-2026-10-01-at-23-20-34-(3).jpg",
+      "https://i.postimg.cc/McjYdMc6/Whats-App-Image-2026-10-01-at-23-20-34-(4).jpg",
+      "https://i.postimg.cc/kVtyf6Vn/Whats-App-Image-2026-10-01-at-23-20-34-(5).jpg",
+      "https://i.postimg.cc/cK8cXgKH/Whats-App-Image-2026-10-01-at-23-20-35.jpg",
+      "https://i.postimg.cc/XZygQGZv/Whats-App-Image-2026-10-01-at-23-20-35-(1).jpg"
+    ],
+    "local_images": [
+      "assets/portfolio_new/residence-m3m_01.jpg",
+      "assets/portfolio_new/residence-m3m_02.jpg",
+      "assets/portfolio_new/residence-m3m_03.jpg",
+      "assets/portfolio_new/residence-m3m_04.jpg",
+      "assets/portfolio_new/residence-m3m_05.jpg",
+      "assets/portfolio_new/residence-m3m_06.jpg",
+      "assets/portfolio_new/residence-m3m_07.jpg",
+      "assets/portfolio_new/residence-m3m_08.jpg"
+    ]
+  }
+]

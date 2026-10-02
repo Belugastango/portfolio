@@ -1,0 +1,486 @@
+/* ==========================================================================
+   DIVINE INTERIORS — ARCHITECTURAL SIDE CONTACT DRAWER
+   Matches the Heron AI / Divine Interiors Swiss Architectural Aesthetic
+   ========================================================================== */
+
+:root {
+  --di-brand: #F15534;
+  --di-brand-hover: #fa3600;
+  --di-dark: #121212;
+  --di-paper: #F6F6F2;
+  --di-paper-alt: #EFEFEA;
+  --di-border: rgba(40, 40, 40, 0.16);
+  --di-border-dark: rgba(40, 40, 40, 0.28);
+  --di-text: #282828;
+  --di-text-muted: rgba(40, 40, 40, 0.64);
+  --di-whatsapp: #25D366;
+}
+
+/* --- Backdrop Overlay --- */
+.divine-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(14, 14, 14, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 99998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s;
+}
+
+.divine-drawer-backdrop.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --- Slide-out Panel --- */
+.divine-drawer-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 560px;
+  max-width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background-color: var(--di-paper);
+  background-image: var(--bg-img, url('../assets/6900476d411e3ea05889428f_bg.svg'));
+  background-repeat: repeat;
+  z-index: 99999;
+  border-left: 1px solid var(--di-border-dark);
+  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(101%);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.divine-drawer-panel.is-active {
+  transform: translateX(0%);
+}
+
+/* Prevent body scroll when drawer open */
+body.divine-drawer-open {
+  overflow: hidden !important;
+}
+
+/* --- Header Bar --- */
+.divine-drawer-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  border-bottom: 1px solid var(--di-border-dark);
+  background: rgba(246, 246, 242, 0.85);
+  backdrop-filter: blur(4px);
+  flex-shrink: 0;
+}
+
+.divine-drawer-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--di-text-muted);
+}
+
+.divine-drawer-status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+  animation: divinePulse 2s infinite;
+}
+
+@keyframes divinePulse {
+  0%, 100% { box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.25); }
+  50% { box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.08); }
+}
+
+.divine-drawer-close-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid var(--di-border-dark);
+  color: var(--di-text);
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.divine-drawer-close-btn:hover {
+  background: var(--di-dark);
+  color: #FFFFFF;
+  border-color: var(--di-dark);
+}
+
+/* --- Scrollable Body --- */
+.divine-drawer-body {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 32px 32px 48px;
+  box-sizing: border-box;
+}
+
+/* Custom Minimal Scrollbar */
+.divine-drawer-body::-webkit-scrollbar {
+  width: 5px;
+}
+.divine-drawer-body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.03);
+}
+.divine-drawer-body::-webkit-scrollbar-thumb {
+  background: rgba(40, 40, 40, 0.2);
+}
+.divine-drawer-body::-webkit-scrollbar-thumb:hover {
+  background: var(--di-brand);
+}
+
+/* --- Lead Title Block --- */
+.divine-drawer-lead {
+  margin-bottom: 28px;
+}
+
+.divine-drawer-tag {
+  display: inline-block;
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--di-brand);
+  margin-bottom: 10px;
+}
+
+.divine-drawer-title {
+  font-family: 'BT Grotesk Trial', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 32px;
+  line-height: 1.1;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--di-text);
+  margin: 0 0 10px 0;
+}
+
+.divine-drawer-desc {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--di-text-muted);
+  margin: 0;
+}
+
+/* --- WHATSAPP HERO CTA (Prominent User Request!) --- */
+.divine-whatsapp-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  background: #111111;
+  color: #FFFFFF;
+  border: 1px solid #111111;
+  text-decoration: none;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+.divine-whatsapp-card:hover {
+  background: #000000;
+  border-color: var(--di-brand);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(241, 85, 52, 0.18);
+}
+
+.divine-whatsapp-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--di-whatsapp);
+}
+
+.divine-whatsapp-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.divine-whatsapp-icon-wrap {
+  width: 44px;
+  height: 44px;
+  background: rgba(37, 211, 102, 0.15);
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--di-whatsapp);
+  flex-shrink: 0;
+}
+
+.divine-whatsapp-label {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 2px;
+}
+
+.divine-whatsapp-action {
+  font-family: 'BT Grotesk Trial', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+
+.divine-whatsapp-sub {
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 2px;
+}
+
+.divine-whatsapp-sub span {
+  color: var(--di-whatsapp);
+}
+
+.divine-whatsapp-arrow {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.divine-whatsapp-card:hover .divine-whatsapp-arrow {
+  transform: translateX(4px);
+  border-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Section Heading --- */
+.divine-drawer-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--di-text-muted);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--di-border);
+}
+
+/* --- Direct Contact Grid --- */
+.divine-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 480px) {
+  .divine-contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.divine-contact-cell {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--di-border);
+  padding: 14px 16px;
+  box-sizing: border-box;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.divine-contact-cell:hover {
+  background: #FFFFFF;
+  border-color: var(--di-border-dark);
+}
+
+.divine-contact-cell.full-width {
+  grid-column: 1 / -1;
+}
+
+.divine-contact-cell-tag {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--di-text-muted);
+  margin-bottom: 6px;
+}
+
+.divine-contact-cell-val {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--di-text);
+  word-break: break-word;
+  line-height: 1.35;
+  text-decoration: none;
+  display: block;
+}
+
+.divine-contact-cell-val:hover {
+  color: var(--di-brand);
+}
+
+.divine-contact-cell-sub {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  color: var(--di-text-muted);
+  margin-top: 4px;
+}
+
+/* --- Project Inquiry Form --- */
+.divine-inquiry-form {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--di-border);
+  padding: 24px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.divine-corner-plus {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  color: var(--di-text-muted);
+  line-height: 1;
+  font-family: monospace;
+  font-size: 12px;
+  user-select: none;
+}
+.divine-corner-plus.tl { top: -6px; left: -5px; }
+.divine-corner-plus.tr { top: -6px; right: -5px; }
+.divine-corner-plus.bl { bottom: -6px; left: -5px; }
+.divine-corner-plus.br { bottom: -6px; right: -5px; }
+
+.divine-form-row {
+  margin-bottom: 16px;
+}
+
+.divine-form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 480px) {
+  .divine-form-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.divine-form-label {
+  display: block;
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--di-text);
+  margin-bottom: 6px;
+}
+
+.divine-form-input,
+.divine-form-select,
+.divine-form-textarea {
+  width: 100%;
+  padding: 10px 14px;
+  background: #FFFFFF;
+  border: 1px solid var(--di-border);
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--di-text);
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.divine-form-input:focus,
+.divine-form-select:focus,
+.divine-form-textarea:focus {
+  border-color: var(--di-text);
+  box-shadow: 0 0 0 1px var(--di-text);
+}
+
+.divine-form-textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.divine-form-submit-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: var(--di-brand);
+  color: #FFFFFF;
+  border: 1px solid var(--di-brand);
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+.divine-form-submit-btn:hover {
+  background: var(--di-brand-hover);
+  border-color: var(--di-brand-hover);
+}
+
+.divine-form-status {
+  margin-top: 14px;
+  padding: 12px 14px;
+  font-size: 12px;
+  font-family: 'Geist Mono', monospace;
+  border: 1px solid transparent;
+  display: none;
+}
+
+.divine-form-status.is-success {
+  display: block;
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.4);
+  color: #15803d;
+}
+
+.divine-drawer-footer-note {
+  margin-top: 24px;
+  text-align: center;
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--di-text-muted);
+}
