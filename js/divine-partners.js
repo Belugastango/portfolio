@@ -63,6 +63,7 @@
 
     // 3. Client Brands Data — Always Full Color
     const clients = [
+      { name: 'Simta Astrix', image: 'assets/logo-simta-astrix-brand.png' },
       { name: 'Polo Ralph Lauren', image: 'assets/logo-ralph-lauren-clean.png' },
       { name: 'Aditya Birla Group', image: 'assets/logo-aditya-birla-clean.png' },
       { name: 'MANGO', image: 'assets/logo-mango-clean.png' },

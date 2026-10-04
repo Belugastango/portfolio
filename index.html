@@ -966,6 +966,321 @@
       transform: translate(calc(100% + 1.2rem), calc(100% + 1.2rem));
     }
   }
+
+  /* ==========================================================================
+     DIVINE INTERIORS x SIMTA ASTRIX EXCLUSIVE PARTNERSHIP SECTION
+     ========================================================================== */
+  .simta-partnership {
+    position: relative;
+    background-color: var(--content--white, #F3F1EC);
+    padding: 6.5rem 0 5rem;
+    overflow: hidden;
+  }
+  @media (max-width: 991px) {
+    .simta-partnership {
+      padding: 4.5rem 0 3.5rem;
+    }
+  }
+  @media (max-width: 479px) {
+    .simta-partnership {
+      padding: 3.5rem 0 2.5rem;
+    }
+  }
+  .simta-header {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 3.5rem;
+    align-items: start;
+    margin-bottom: 3.5rem;
+  }
+  @media (max-width: 991px) {
+    .simta-header {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+  .simta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 1.2rem;
+    padding: 0.4rem 0.85rem;
+    background: rgba(241, 85, 52, 0.08);
+    border: 1px solid rgba(241, 85, 52, 0.28);
+    border-radius: 2px;
+  }
+  .simta-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #F15534;
+    display: inline-block;
+    box-shadow: 0 0 8px rgba(241, 85, 52, 0.7);
+  }
+  .simta-badge .txt {
+    color: #1a1a1a;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+  .simta-title {
+    margin: 0;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+  .simta-header-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .simta-header-logo-wrap {
+    display: flex;
+    align-items: center;
+  }
+  .simta-logo-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  .simta-logo-link:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+  }
+  .simta-brand-logo {
+    height: 44px;
+    width: auto;
+    max-width: 270px;
+    object-fit: contain;
+  }
+  @media (max-width: 479px) {
+    .simta-brand-logo {
+      height: 36px;
+    }
+  }
+  .simta-lead-desc {
+    margin: 0;
+    line-height: 1.6;
+    color: #4a4a4a;
+  }
+  .simta-divider {
+    position: relative;
+    margin: 0 0 3.5rem;
+  }
+  @media (max-width: 991px) {
+    .simta-divider {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  /* Offerings 3-Column Grid */
+  .simta-offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    position: relative;
+    border-top: 1px solid var(--color-border, rgba(0, 0, 0, 0.12));
+    border-bottom: 1px solid var(--color-border, rgba(0, 0, 0, 0.12));
+    margin-bottom: 3.5rem;
+  }
+  @media (max-width: 991px) {
+    .simta-offerings-grid {
+      grid-template-columns: 1fr;
+      border-top: none;
+      border-bottom: none;
+      margin-bottom: 2.5rem;
+    }
+  }
+  .simta-offering-col {
+    position: relative;
+    padding: 2.75rem 2.25rem;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    transition: background 0.3s ease;
+  }
+  .simta-offering-col:hover {
+    background: rgba(0, 0, 0, 0.02);
+  }
+  @media (min-width: 992px) {
+    .simta-offering-col:not(:last-child) {
+      border-right: 1px solid var(--color-border, rgba(0, 0, 0, 0.12));
+    }
+  }
+  @media (max-width: 991px) {
+    .simta-offering-col {
+      padding: 2.25rem 0;
+      border-bottom: 1px solid var(--color-border, rgba(0, 0, 0, 0.12));
+    }
+  }
+  .simta-offering-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px dashed var(--color-border, rgba(0, 0, 0, 0.15));
+  }
+  .simta-num {
+    color: #F15534;
+    font-weight: 700;
+  }
+  .simta-tag {
+    color: #666;
+    letter-spacing: 0.08em;
+  }
+  .simta-col-title {
+    margin: 0 0 1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .simta-col-p {
+    margin: 0 0 1.5rem;
+    color: #555;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+  .simta-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+  .simta-pill {
+    display: inline-block;
+    padding: 0.3rem 0.65rem;
+    font-size: 11px;
+    font-family: var(--font-mono, monospace);
+    font-weight: 600;
+    color: #222;
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    letter-spacing: 0.02em;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+  .simta-offering-col:hover .simta-pill {
+    background: rgba(0, 0, 0, 0.07);
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+
+  /* Technical Specs 4-Stat Bar */
+  .simta-specs-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid var(--color-border, rgba(0, 0, 0, 0.12));
+    margin-bottom: 2.75rem;
+  }
+  @media (max-width: 991px) {
+    .simta-specs-bar {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 479px) {
+    .simta-specs-bar {
+      grid-template-columns: 1fr;
+    }
+  }
+  .simta-spec-item {
+    position: relative;
+    padding: 1.85rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  @media (min-width: 992px) {
+    .simta-spec-item:not(:last-child) {
+      border-right: 1px solid var(--color-border, rgba(0, 0, 0, 0.12));
+    }
+  }
+  @media (max-width: 991px) {
+    .simta-spec-item {
+      border-bottom: 1px solid var(--color-border, rgba(0, 0, 0, 0.12));
+    }
+    .simta-spec-item:nth-child(odd) {
+      border-right: 1px solid var(--color-border, rgba(0, 0, 0, 0.12));
+    }
+  }
+  @media (max-width: 479px) {
+    .simta-spec-item:nth-child(odd) {
+      border-right: none;
+    }
+  }
+  .simta-spec-kicker {
+    color: #666;
+    letter-spacing: 0.08em;
+    font-size: 11px;
+  }
+  .simta-spec-val {
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.1;
+  }
+  .simta-spec-desc {
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Footer bar */
+  .simta-footer-bar {
+    position: relative;
+    padding-top: 1.75rem;
+  }
+  .simta-footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  @media (max-width: 767px) {
+    .simta-footer-content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+  }
+  .simta-footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .simta-footer-left .txt-font-mono {
+    color: #777;
+  }
+  .simta-footer-note {
+    color: #444;
+  }
+  .simta-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.85rem 1.6rem;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 2px;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  .simta-cta-btn:hover {
+    background-color: #F15534;
+    transform: translateY(-1px);
+    color: #ffffff;
+  }
+  .simta-cta-arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+  .simta-cta-btn:hover .simta-cta-arrow {
+    transform: translate(2px, -2px);
+  }
 </style></div><div class="cursor"><div class="cursor-main"><div class="cursor-inner"></div></div></div><div class="main-deco"><div class="main-deco-inner"><div class="line line-horizital top left right"></div><div class="line line-horizital bot left right"></div><div class="line line-vertical left top"></div><div class="line line-vertical right top"></div></div></div><div class="embed-none w-embed"><svg style="position: absolute; width: 0; height: 0;">
   <filter id="path-filter">
     <feFlood flood-opacity="0" result="BackgroundImageFix"/>
@@ -2588,7 +2903,147 @@
 </div></div></div><div id="w-node-e4008f8f-3a67-5da4-cf42-372f27004bef-27004be2" class="btn-fill-icon-inner icon-bot"><div class="btn-fill-icon-svg"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.875 14.375L16.25 9.93818L11.875 5.625M16.25 9.93818H2.5" stroke="currentColor" stroke-width="1.5"/>
 </svg>
-</div></div></div></div></div></a></div></div><div id="w-node-_4eaf26e7-f141-29a9-6275-f4a32b7de44c-02cc3ba1" class="home-intro-partner-wrap"><div class="line line-vertical top left"></div><div class="line line-vertical top right"></div><div class="home-intro-partner"><div class="home-intro-partner-label-wrap"><div class="home-intro-partner-label"><div class="txt txt-font-mono txt-14 mb-txt-12">CLIENTS</div></div><div class="line line-horizital bot left right"></div><div class="line line-horizital top left right"></div><div data-cursor="hidden" class="home-intro-partner-ctrls"><div class="line line-vertical left top"></div><div data-direct="left" class="home-intro-control item-prev" role="button" aria-label="Slide Left" title="Slide Left"><div class="home-intro-control-arrow"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.125 5.625L3.75 10.0618L8.125 14.375M3.75 10.0618H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div><div class="line line-vertical left top"></div><div data-direct="right" class="home-intro-control item-next" role="button" aria-label="Slide Right" title="Slide Right"><div class="home-intro-control-arrow"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.875 14.375L16.25 9.93818L11.875 5.625M16.25 9.93818H2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></div></div><div class="home-intro-partner-inner"></div></div><div class="home-intro-desc"><div class="txt txt-font-mono txt-12">Trusted by leading brands across hospitality, retail, corporate, and residential sectors.</div><div class="line line-horizital top left right"></div><div class="line line-horizital bot left right"></div></div></div></div></section></div></home-intro-wrap><home-problem-wrap class="web-component"><div class="home-problem-wrap"><section id="services" class="home-problem"><div class="line line-horizital top left right"></div><div class="w-layout-blockcontainer container full-h w-container"><div class="home-problem-inner"><div class="home-problem-head"><div class="home-problem-title-wrap"><div class="home-problem-label"><div class="txt txt-font-mono txt-14">OUR SERVICES</div></div><div class="home-problem-title"><h2 class="heading h2 tb-h3 mb-h2">End-to-end execution, from concept to handover</h2></div></div><div class="home-problem-sub"><div class="txt txt-16">We deliver turnkey interior architecture, civil construction, MEP, HVAC, and facade solutions across residential, commercial, and hospitality sectors.</div></div></div><div class="home-problem-content"><div class="line line-horizital top left right"></div><div class="home-problem-cms"><div class="home-problem-list"><div data-problem="civil" class="home-problem-item"><div class="home-problem-item-head"><div class="home-problem-item-head-title"><div class="txt txt-font-mono txt-14">CIVIL AND INTERIOR</div></div><div class="home-problem-item-head-num"><div class="txt txt-font-mono txt-14">[01]</div></div><div class="line line-dash line-horizital bot left right"></div><div class="home-problem-item-dot"></div></div><div class="home-problem-item-main"><div class="home-problem-item-img"><div class="home-problem-item-img-inner"><img src="assets/service-civil-interior.png" alt="CIVIL AND INTERIOR" class="service-art-img" loading="lazy" /></div></div><div class="home-problem-item-plus left top"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus right top"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus bot left"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus bot right"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div></div><div class="home-problem-item-content"><div class="home-problem-item-title-wrap"><div class="home-problem-item-title"><div class="heading h5 tb-h6 mb-h4">CIVIL AND INTERIOR</div></div><div class="home-problem-item-sub-wrap"><div class="home-problem-item-sub"><div class="txt txt-16 fw-nomal">Complete civil construction and interior execution for retail, hospitality, and office spaces - from structural build to fully finished fit-out, delivered on schedule.</div></div></div></div><div class="line line-dash line-horizital top left right"></div></div><div class="line line-horizital bot left right"></div></div><div data-problem="mep" class="home-problem-item"><div class="line line-vertical left top"></div><div class="home-problem-item-head"><div class="home-problem-item-head-title"><div class="txt txt-font-mono txt-14">MEP</div></div><div class="home-problem-item-head-num"><div class="txt txt-font-mono txt-14">[02]</div></div><div class="line line-dash line-horizital bot left right"></div><div class="home-problem-item-dot"></div></div><div class="home-problem-item-main"><div class="home-problem-item-img"><div class="home-problem-item-img-inner"><img src="assets/service-mep.png" alt="MEP" class="service-art-img" loading="lazy" /></div></div><div class="home-problem-item-plus left top"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus right top"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus bot left"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus bot right"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div></div><div class="home-problem-item-content"><div class="home-problem-item-title-wrap"><div class="home-problem-item-title"><div class="heading h5 tb-h6 mb-h4">MEP</div></div><div class="home-problem-item-sub-wrap"><div class="home-problem-item-sub"><div class="txt txt-16 fw-nomal">Comprehensive mechanical, electrical, and plumbing systems for commercial fit-outs - coordinated, code-compliant, and installed to spec across single and multi-location projects.</div></div></div></div><div class="line line-dash line-horizital top left right"></div></div><div class="line line-horizital bot left right"></div></div><div data-problem="hvac" class="home-problem-item"><div class="line line-vertical left top"></div><div class="home-problem-item-head"><div class="home-problem-item-head-title"><div class="txt txt-font-mono txt-14">HVAC</div></div><div class="home-problem-item-head-num"><div class="txt txt-font-mono txt-14">[03]</div></div><div class="line line-dash line-horizital bot left right"></div><div class="home-problem-item-dot"></div></div><div class="home-problem-item-main"><div class="home-problem-item-img"><div class="home-problem-item-img-inner"><img src="assets/service-hvac.png" alt="HVAC" class="service-art-img" loading="lazy" /></div></div><div class="home-problem-item-plus left top"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus right top"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus bot left"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus bot right"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div></div><div class="home-problem-item-content"><div class="home-problem-item-title-wrap"><div class="home-problem-item-title"><div class="heading h5 tb-h6 mb-h4">HVAC</div></div><div class="home-problem-item-sub-wrap"><div class="home-problem-item-sub"><div class="txt txt-16 fw-nomal">End-to-end HVAC design and installation for retail, hospitality, and commercial spaces - keeping every project comfortable, efficient, and fully compliant.</div></div></div></div><div class="line line-dash line-horizital top left right"></div></div><div class="line line-horizital bot left right"></div></div><div data-problem="facades" class="home-problem-item"><div class="line line-vertical left top"></div><div class="home-problem-item-head"><div class="home-problem-item-head-title"><div class="txt txt-font-mono txt-14">FACADE WORKS</div></div><div class="home-problem-item-head-num"><div class="txt txt-font-mono txt-14">[04]</div></div><div class="line line-dash line-horizital bot left right"></div><div class="home-problem-item-dot"></div></div><div class="home-problem-item-main"><div class="home-problem-item-img"><div class="home-problem-item-img-inner"><img src="assets/service-facade.png" alt="FACADE WORKS" class="service-art-img" loading="lazy" /></div></div><div class="home-problem-item-plus left top"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus right top"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus bot left"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus bot right"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div></div><div class="home-problem-item-content"><div class="home-problem-item-title-wrap"><div class="home-problem-item-title"><div class="heading h5 tb-h6 mb-h4">FACADE WORKS</div></div><div class="home-problem-item-sub-wrap"><div class="home-problem-item-sub"><div class="txt txt-16 fw-nomal">External facade design and execution across retail and commercial projects - built to brand standards and compliant with mall and building authority requirements.</div></div></div></div><div class="line line-dash line-horizital top left right"></div></div><div class="line line-horizital bot left right"></div></div></div></div><div class="home-problem-pagi"></div></div><div class="line line-horizital bot left right"></div></div></div></section></div></home-problem-wrap><home-map-wrap class="web-component"><div class="home-map-wrap"><section class="home-map"><div class="home-map-main"><div class="w-layout-blockcontainer container full-h w-container"><div class="home-map-inner"><div id="w-node-a8c28559-c3ec-299d-698d-42186e2956a7-02cc3ba1" class="home-map-main-stick"><div class="home-map-main-stick-inner"><div class="bg-border"><div class="bg-border-inner"><div class="bg-border-item bg-border-horizital top"></div><div class="bg-border-item bg-border-horizital bot"></div><div class="bg-border-item bg-border-vertical left"></div><div class="bg-border-item bg-border-vertical right"></div><div class="bg-border-plus top left"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div></div></div></div></div></a></div></div><div id="w-node-_4eaf26e7-f141-29a9-6275-f4a32b7de44c-02cc3ba1" class="home-intro-partner-wrap"><div class="line line-vertical top left"></div><div class="line line-vertical top right"></div><div class="home-intro-partner"><div class="home-intro-partner-label-wrap"><div class="home-intro-partner-label"><div class="txt txt-font-mono txt-14 mb-txt-12">CLIENTS</div></div><div class="line line-horizital bot left right"></div><div class="line line-horizital top left right"></div><div data-cursor="hidden" class="home-intro-partner-ctrls"><div class="line line-vertical left top"></div><div data-direct="left" class="home-intro-control item-prev" role="button" aria-label="Slide Left" title="Slide Left"><div class="home-intro-control-arrow"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.125 5.625L3.75 10.0618L8.125 14.375M3.75 10.0618H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div><div class="line line-vertical left top"></div><div data-direct="right" class="home-intro-control item-next" role="button" aria-label="Slide Right" title="Slide Right"><div class="home-intro-control-arrow"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.875 14.375L16.25 9.93818L11.875 5.625M16.25 9.93818H2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></div></div><div class="home-intro-partner-inner"></div></div><div class="home-intro-desc"><div class="txt txt-font-mono txt-12">Trusted by leading brands across hospitality, retail, corporate, and residential sectors.</div><div class="line line-horizital top left right"></div><div class="line line-horizital bot left right"></div></div></div></div></section></div></home-intro-wrap><home-problem-wrap class="web-component"><div class="home-problem-wrap"><section id="services" class="home-problem"><div class="line line-horizital top left right"></div><div class="w-layout-blockcontainer container full-h w-container"><div class="home-problem-inner"><div class="home-problem-head"><div class="home-problem-title-wrap"><div class="home-problem-label"><div class="txt txt-font-mono txt-14">OUR SERVICES</div></div><div class="home-problem-title"><h2 class="heading h2 tb-h3 mb-h2">End-to-end execution, from concept to handover</h2></div></div><div class="home-problem-sub"><div class="txt txt-16">We deliver turnkey interior architecture, civil construction, MEP, HVAC, and facade solutions across residential, commercial, and hospitality sectors.</div></div></div><div class="home-problem-content"><div class="line line-horizital top left right"></div><div class="home-problem-cms"><div class="home-problem-list"><div data-problem="civil" class="home-problem-item"><div class="home-problem-item-head"><div class="home-problem-item-head-title"><div class="txt txt-font-mono txt-14">CIVIL AND INTERIOR</div></div><div class="home-problem-item-head-num"><div class="txt txt-font-mono txt-14">[01]</div></div><div class="line line-dash line-horizital bot left right"></div><div class="home-problem-item-dot"></div></div><div class="home-problem-item-main"><div class="home-problem-item-img"><div class="home-problem-item-img-inner"><img src="assets/service-civil-interior.png" alt="CIVIL AND INTERIOR" class="service-art-img" loading="lazy" /></div></div><div class="home-problem-item-plus left top"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus right top"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus bot left"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus bot right"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div></div><div class="home-problem-item-content"><div class="home-problem-item-title-wrap"><div class="home-problem-item-title"><div class="heading h5 tb-h6 mb-h4">CIVIL AND INTERIOR</div></div><div class="home-problem-item-sub-wrap"><div class="home-problem-item-sub"><div class="txt txt-16 fw-nomal">Complete civil construction and interior execution for retail, hospitality, and office spaces - from structural build to fully finished fit-out, delivered on schedule.</div></div></div></div><div class="line line-dash line-horizital top left right"></div></div><div class="line line-horizital bot left right"></div></div><div data-problem="mep" class="home-problem-item"><div class="line line-vertical left top"></div><div class="home-problem-item-head"><div class="home-problem-item-head-title"><div class="txt txt-font-mono txt-14">MEP</div></div><div class="home-problem-item-head-num"><div class="txt txt-font-mono txt-14">[02]</div></div><div class="line line-dash line-horizital bot left right"></div><div class="home-problem-item-dot"></div></div><div class="home-problem-item-main"><div class="home-problem-item-img"><div class="home-problem-item-img-inner"><img src="assets/service-mep.png" alt="MEP" class="service-art-img" loading="lazy" /></div></div><div class="home-problem-item-plus left top"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus right top"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus bot left"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus bot right"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div></div><div class="home-problem-item-content"><div class="home-problem-item-title-wrap"><div class="home-problem-item-title"><div class="heading h5 tb-h6 mb-h4">MEP</div></div><div class="home-problem-item-sub-wrap"><div class="home-problem-item-sub"><div class="txt txt-16 fw-nomal">Comprehensive mechanical, electrical, and plumbing systems for commercial fit-outs - coordinated, code-compliant, and installed to spec across single and multi-location projects.</div></div></div></div><div class="line line-dash line-horizital top left right"></div></div><div class="line line-horizital bot left right"></div></div><div data-problem="hvac" class="home-problem-item"><div class="line line-vertical left top"></div><div class="home-problem-item-head"><div class="home-problem-item-head-title"><div class="txt txt-font-mono txt-14">HVAC</div></div><div class="home-problem-item-head-num"><div class="txt txt-font-mono txt-14">[03]</div></div><div class="line line-dash line-horizital bot left right"></div><div class="home-problem-item-dot"></div></div><div class="home-problem-item-main"><div class="home-problem-item-img"><div class="home-problem-item-img-inner"><img src="assets/service-hvac.png" alt="HVAC" class="service-art-img" loading="lazy" /></div></div><div class="home-problem-item-plus left top"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus right top"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus bot left"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus bot right"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div></div><div class="home-problem-item-content"><div class="home-problem-item-title-wrap"><div class="home-problem-item-title"><div class="heading h5 tb-h6 mb-h4">HVAC</div></div><div class="home-problem-item-sub-wrap"><div class="home-problem-item-sub"><div class="txt txt-16 fw-nomal">End-to-end HVAC design and installation for retail, hospitality, and commercial spaces - keeping every project comfortable, efficient, and fully compliant.</div></div></div></div><div class="line line-dash line-horizital top left right"></div></div><div class="line line-horizital bot left right"></div></div><div data-problem="facades" class="home-problem-item"><div class="line line-vertical left top"></div><div class="home-problem-item-head"><div class="home-problem-item-head-title"><div class="txt txt-font-mono txt-14">FACADE WORKS</div></div><div class="home-problem-item-head-num"><div class="txt txt-font-mono txt-14">[04]</div></div><div class="line line-dash line-horizital bot left right"></div><div class="home-problem-item-dot"></div></div><div class="home-problem-item-main"><div class="home-problem-item-img"><div class="home-problem-item-img-inner"><img src="assets/service-facade.png" alt="FACADE WORKS" class="service-art-img" loading="lazy" /></div></div><div class="home-problem-item-plus left top"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus right top"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus bot left"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div><div class="home-problem-item-plus bot right"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/><path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/></svg></div></div></div><div class="home-problem-item-content"><div class="home-problem-item-title-wrap"><div class="home-problem-item-title"><div class="heading h5 tb-h6 mb-h4">FACADE WORKS</div></div><div class="home-problem-item-sub-wrap"><div class="home-problem-item-sub"><div class="txt txt-16 fw-nomal">External facade design and execution across retail and commercial projects - built to brand standards and compliant with mall and building authority requirements.</div></div></div></div><div class="line line-dash line-horizital top left right"></div></div><div class="line line-horizital bot left right"></div></div></div></div><div class="home-problem-pagi"></div></div><div class="line line-horizital bot left right"></div></div></div></section></div></home-problem-wrap>
+<simta-partnership-wrap class="web-component">
+  <div class="simta-partnership-wrap">
+    <section id="partnership" class="simta-partnership bg-global">
+      <div class="line line-horizital top left right"></div>
+      <div class="w-layout-blockcontainer container w-container">
+        
+        <!-- Header -->
+        <div class="simta-header">
+          <div class="simta-header-left">
+            <div class="simta-badge">
+              <span class="simta-dot"></span>
+              <span class="txt txt-font-mono txt-14">EXCLUSIVE MATERIAL &amp; FABRICATION PARTNER</span>
+            </div>
+            <h2 class="heading h2 tb-h3 mb-h2 simta-title">WE EXCLUSIVELY USE SIMTA ASTRIX</h2>
+          </div>
+          <div class="simta-header-right">
+            <div class="simta-header-logo-wrap">
+              <a href="https://simtaastrix.com/" target="_blank" rel="noopener noreferrer" class="simta-logo-link" title="Visit Simta Astrix Official Website" data-barba-prevent="">
+                <img src="assets/logo-simta-astrix-brand.png" alt="Simta Astrix - Window, Door and Interior Solutions" class="simta-brand-logo" loading="lazy" />
+              </a>
+            </div>
+            <p class="txt txt-16 simta-lead-desc">
+              Simta Astrix (a brand under Simta Clear Coats Pvt Ltd) is one of India's largest and most prominent manufacturers of uPVC profiles, windows, and doors. Headquartered in Coimbatore, Tamil Nadu, the company leverages over 35 years of industry experience and operates high-precision European manufacturing lines using German technology.
+            </p>
+          </div>
+        </div>
+
+        <div class="line line-horizital left right simta-divider"></div>
+
+        <!-- 3-Column Offerings Grid -->
+        <div class="simta-offerings-grid">
+          
+          <!-- Column 1 -->
+          <div class="simta-offering-col">
+            <div class="simta-offering-head">
+              <span class="txt txt-font-mono txt-12 simta-num">[01]</span>
+              <span class="txt txt-font-mono txt-12 simta-tag">ARCHITECTURAL APERTURES</span>
+            </div>
+            <h3 class="heading h5 mb-h4 simta-col-title">uPVC Windows</h3>
+            <p class="txt txt-14 simta-col-p">
+              Engineered for extreme structural resistance, acoustic calmness, and energy-efficient thermal-fusion welded leak-proof corners across commercial and luxury residential spaces.
+            </p>
+            <div class="simta-pills">
+              <span class="simta-pill">Sliding Windows</span>
+              <span class="simta-pill">Traditional Casement</span>
+              <span class="simta-pill">Arch Windows</span>
+              <span class="simta-pill">Tilt &amp; Turn</span>
+              <span class="simta-pill">Bay &amp; Villa</span>
+              <span class="simta-pill">Fixed Windows</span>
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="simta-offering-col">
+            <div class="simta-offering-head">
+              <span class="txt txt-font-mono txt-12 simta-num">[02]</span>
+              <span class="txt txt-font-mono txt-12 simta-tag">ENTRANCE &amp; PASSAGEWAYS</span>
+            </div>
+            <h3 class="heading h5 mb-h4 simta-col-title">uPVC &amp; Alternative Doors</h3>
+            <p class="txt txt-14 simta-col-p">
+              High-impact resistant doors engineered to endure heavy footfall while delivering German mechanical precision and customizable architectural finishes.
+            </p>
+            <div class="simta-pills">
+              <span class="simta-pill">uPVC Casement</span>
+              <span class="simta-pill">Sliding Doors</span>
+              <span class="simta-pill">ABS Doors</span>
+              <span class="simta-pill">Premium Designer</span>
+              <span class="simta-pill">Lamination Wood Finish</span>
+            </div>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="simta-offering-col">
+            <div class="simta-offering-head">
+              <span class="txt txt-font-mono txt-12 simta-num">[03]</span>
+              <span class="txt txt-font-mono txt-12 simta-tag">INTERIOR ARCHITECTURE</span>
+            </div>
+            <h3 class="heading h5 mb-h4 simta-col-title">Modular Kitchens &amp; Interiors</h3>
+            <p class="txt txt-14 simta-col-p">
+              100% termite-proof, waterproof, and warp-resistant modular interior cabinetry designed and fabricated with millimeter precision for turnkey handover.
+            </p>
+            <div class="simta-pills">
+              <span class="simta-pill">Modular Kitchens</span>
+              <span class="simta-pill">Custom Wardrobes</span>
+              <span class="simta-pill">TV &amp; Media Units</span>
+              <span class="simta-pill">Interior Solutions</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4-Stat Technical Callout Bar -->
+        <div class="simta-specs-bar">
+          <div class="simta-spec-item">
+            <div class="txt txt-font-mono txt-12 simta-spec-kicker">HERITAGE &amp; ORIGIN</div>
+            <div class="simta-spec-val">35+ Years</div>
+            <div class="txt txt-14 simta-spec-desc">Simta Clear Coats · Coimbatore HQ with automated European manufacturing lines</div>
+          </div>
+
+          <div class="simta-spec-item">
+            <div class="txt txt-font-mono txt-12 simta-spec-kicker">STRUCTURAL CORE</div>
+            <div class="simta-spec-val">Steel Reinforced</div>
+            <div class="txt txt-14 simta-spec-desc">Multi-chambered, 100% lead-free profile sections with galvanized steel internal cores</div>
+          </div>
+
+          <div class="simta-spec-item">
+            <div class="txt txt-font-mono txt-12 simta-spec-kicker">ENVIRONMENTAL SHIELD</div>
+            <div class="simta-spec-val">German UV Foil</div>
+            <div class="txt txt-14 simta-spec-desc">Significantly reduces dust, noise &amp; heat. Finishes from classic wood grain to pyrite gold</div>
+          </div>
+
+          <div class="simta-spec-item">
+            <div class="txt txt-font-mono txt-12 simta-spec-kicker">MANUFACTURER GUARANTEE</div>
+            <div class="simta-spec-val">Up to 20 Yrs</div>
+            <div class="txt txt-14 simta-spec-desc">Backed by comprehensive warranties of up to 20 years on profiles and structural finishes</div>
+          </div>
+        </div>
+
+        <!-- Bottom verification & external link bar -->
+        <div class="simta-footer-bar">
+          <div class="line line-horizital top left right"></div>
+          <div class="simta-footer-content">
+            <div class="simta-footer-left">
+              <span class="txt txt-font-mono txt-12">[COIMBATORE, TN · EUROPEAN TECHNOLOGY · GERMAN LAMINATION]</span>
+              <span class="txt txt-14 simta-footer-note">All uPVC window, door, and modular casework installations are manufactured exclusively to Simta Astrix engineering specifications.</span>
+            </div>
+            <div class="simta-footer-right">
+              <a href="https://simtaastrix.com/" target="_blank" rel="noopener noreferrer" class="simta-cta-btn" data-barba-prevent="">
+                <span class="txt txt-font-mono txt-14">Explore Simta Astrix</span>
+                <span class="simta-cta-arrow">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="line line-horizital bot left right"></div>
+    </section>
+  </div>
+</simta-partnership-wrap>
+<home-map-wrap class="web-component"><div class="home-map-wrap"><section class="home-map"><div class="home-map-main"><div class="w-layout-blockcontainer container full-h w-container"><div class="home-map-inner"><div id="w-node-a8c28559-c3ec-299d-698d-42186e2956a7-02cc3ba1" class="home-map-main-stick"><div class="home-map-main-stick-inner"><div class="bg-border"><div class="bg-border-inner"><div class="bg-border-item bg-border-horizital top"></div><div class="bg-border-item bg-border-horizital bot"></div><div class="bg-border-item bg-border-vertical left"></div><div class="bg-border-item bg-border-vertical right"></div><div class="bg-border-plus top left"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.995 0V8V12" stroke="currentColor" class="path-vertical"/>
 <path d="M12 5.995L4 5.99499L0 5.99499" class="path-horizital" stroke="currentColor"/>
 </svg></div></div><div class="bg-border-plus top right"><div class="embed-ic w-embed"><svg width="100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -5115,7 +5570,7 @@
 </svg>
 </div></div></div></div></div></a></div><div class="line line-dash line-vertical left top"></div></div><div id="w-node-_98ea3bb3-e1d5-3fba-2ff2-39bb8fc94674-8fc94651" class="cta-main-item item-right hidden-mb"><div class="line line-dash line-vertical left top"></div></div><div class="line line-dash line-horizital bot left right"></div></div><div class="cta-deco grid"><div id="w-node-_98ea3bb3-e1d5-3fba-2ff2-39bb8fc94674-8fc94652" class="cta-deco-item item-left hidden-mb"><div class="cta-head-item-txt hidden-mb"><div class="txt txt-font-mono txt-12 mb-txt-10">[0,831]</div></div></div><div id="w-node-_98ea3bb3-e1d5-3fba-2ff2-39bb8fc94678-8fc94651" class="cta-deco-item item-center bg-global"><div class="cta-deco-item-img"><div class="cta-deco-item-img-inner"><div data-wf--ink-mask--variant="path" class="ink-mask w-variant-72855a58-688b-8b57-148e-265e4d03bc5e"><div data-end="25" data-start="75" class="ink-mask-img main"><img src="assets/6a6ad84d47e6be3956e3a35a_cta-sketch.webp" class="img-basic img-abs"/></div><div class="ink-mask-img sub ink-filter"><svg width="100%" preserveAspectRatio="none" class="layer"><defs><mask id="inkCircleMask" maskContentUnits="userSpaceOnUse"><path fill="white" STYLE="filter: url(#sharedDisplacementFilter);" d="M 0 1  Q 500 2 1000 1  L 1000 0  L 0 0  Z" data-value-final="  M 0 1000   Q 500 1250 1000 1000   L 1000 0   L 0 0   Z" class="mask"></path></mask></defs><filter id="sharedDisplacementFilter"><feTurbulence type="fractalNoise" baseFrequency="0.045 0.055" numOctaves="4" seed="5" result="noise"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="noise" scale="100" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap><feGaussianBlur stdDeviation="1.8" result="blurred"></feGaussianBlur><feComponentTransfer in="blurred" result="contrast"><feFuncA type="linear" slope="2.2" intercept="-0.6"></feFuncA></feComponentTransfer></filter><image href="assets/6a4b5161f0d11f1602cc3cc4_615801a3aaf9bfaa3a8ac5c616b665eb_cta%20image.webp" x="0" y="0" width="100%" mask="url(#inkCircleMask)" height="100%" class="img-basic"></image></svg></div></div></div><div class="cta-deco-item-img-inner on-mb"><img src="assets/6a67432f15ab968d9acb8af4_cta-mb.webp" loading="lazy" alt="" class="img-basic img-fill"/></div><div class="cta-deco-item-img-block"></div></div><div class="line line-dash line-vertical left top"></div></div><div id="w-node-_98ea3bb3-e1d5-3fba-2ff2-39bb8fc9467c-8fc94651" class="cta-deco-item item-right"><div class="line line-dash line-vertical left top"></div></div><div class="line line-horizital bot left right"></div></div></div><div class="line line-horizital bot left right"></div></section></div></home-cta-wrap><footer-wrap class="web-component"><div class="footer-wrap"><footer class="footer"><div class="w-layout-blockcontainer container w-container"><div class="footer-main grid"><div id="w-node-ec209fda-4140-b2bf-5394-7c1f4ef3318f-4ef3318a" class="footer-head"><div id="w-node-ec209fda-4140-b2bf-5394-7c1f4ef33190-4ef3318a" class="footer-title-wrap"><div class="footer-title"><div class="heading h4 tb-h5 mb-h3">Interior Architecture &amp; Spatial Precision</div></div><div class="line line-horizital bot left right"></div></div><div class="footer-form-wrap"><div class="footer-form-label"><div class="txt txt-font-mono txt-14 mb-txt-12">Subscribe</div></div><div class="footer-form-inner"><div class="footer-form w-form"><form id="footer-form" name="wf-form-Footer-Form" data-name="Footer Form" method="get" class="footer-form-main w-node-ec209fda-4140-b2bf-5394-7c1f4ef331a0-4ef3318a" data-wf-page-id="6a4b5161f0d11f1602cc3ba1" data-wf-element-id="ec209fda-4140-b2bf-5394-7c1f4ef331a0"><div class="footer-form-title"><div class="txt txt-16 mb-txt-14">Stay inspired. Sign up for project updates and design insights from Divine Interiors.</div></div><div class="input-wrap footer-form-input-wrap"><input class="txt txt-16 input footer-form-input w-input" autocomplete="off" maxlength="256" name="email" data-name="Email" placeholder="Enter your email" type="email" id="email" required=""/><button type="submit" class="input-submit footer-form-input-submit"><div class="input-submit-ic"><div class="ic-embed w-embed"><svg width="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M18.002 10L12.4629 15.0234L11.2871 13.7266L14.4316 10.875H2V9.125H14.4316L11.2871 6.27344L12.4629 4.97656L18.002 10Z" fill="currentColor"/>
-</svg></div></div></button></div></form><div class="footer-form-success w-form-done"><div class="footer-form-success-inner"><div class="footer-form-success-title"><div class="heading h6 mb-h5">Thanks for reaching out!</div></div><div class="footer-form-success-sub"><div class="txt txt-16 txt-reg">We&#x27;ve received your information.<br/>Our team will reach out to you shortly!</div></div></div></div><div class="w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div></div><div class="line line-vertical left top"></div></div></div><div id="w-node-_35b68888-015e-8c8e-2f22-bde4cb8c5a57-4ef3318a" class="footer-body"><div class="footer-content-item"><div id="w-node-ec209fda-4140-b2bf-5394-7c1f4ef331af-4ef3318a" class="footer-menu"><div class="footer-menu-item item-right"><div class="footer-menu-item-label"><div class="txt txt-font-mono txt-14 mb-txt-12">Company</div></div><div class="footer-menu-item-link-wrap item-top"><a href="index.html" aria-current="page" class="footer-menu-item-link item-top w-inline-block w--current"><div class="txt txt-16 mb-txt-14">Home</div></a><a class='footer-menu-item-link item-top w-inline-block' href="#about"><div class="txt txt-16 mb-txt-14">About us</div></a><a class='footer-menu-item-link item-top w-inline-block' href="javascript:void(0)" data-open-contact="true" data-barba-prevent=""><div class="txt txt-16 mb-txt-14">Contact us</div></a></div><div class="line line-vertical left top"></div></div><div class="footer-menu-item"><div class="footer-menu-item-label"><div class="txt txt-font-mono txt-14 mb-txt-12">Services</div></div><div class="footer-menu-item-link-wrap"><a class='footer-menu-item-link w-inline-block' href="#services"><div class="txt txt-16 mb-txt-14">Civil &amp; Interiors</div></a><a class='footer-menu-item-link w-inline-block' href="#services"><div class="txt txt-16 mb-txt-14">MEP Engineering</div></a><a class='footer-menu-item-link w-inline-block' href="#services"><div class="txt txt-16 mb-txt-14">HVAC &amp; Facades</div></a></div><div class="line line-vertical left top"></div></div><div class="footer-menu-item"><div class="footer-menu-item-label"><div class="txt txt-font-mono txt-14 mb-txt-12">Portfolio</div></div><div class="footer-menu-item-link-wrap"><a class='footer-menu-item-link w-inline-block' href="#portfolio"><div class="txt txt-16 mb-txt-14">Our Projects</div></a><a class='footer-menu-item-link w-inline-block' href="#about"><div class="txt txt-16 mb-txt-14">About Us</div></a><a class='footer-menu-item-link w-inline-block' href="javascript:void(0)" data-open-contact="true" data-barba-prevent=""><div class="txt txt-16 mb-txt-14">Contact Us</div></a></div><div class="line line-vertical left top"></div></div></div><div class="line line-horizital bot left right footer-content-item-line"></div></div><div class="footer-content-item item-bot"><div id="w-node-ec209fda-4140-b2bf-5394-7c1f4ef331e4-4ef3318a" class="footer-info-wrap"><div id="w-node-ec209fda-4140-b2bf-5394-7c1f4ef331e5-4ef3318a" class="footer-info-item item1"><div class="footer-info-item-label"><div class="txt txt-font-mono txt-14 mb-txt-12">Address</div></div><a href="mailto:divineinteriors.v@gmail.com" target="_blank" class="footer-info-item-title w-inline-block"><div class="txt txt-16 mb-txt-14">K2, 1068, Durga Vihar, Devli,<br/>Khanpur, Delhi-110080</div></a><a id="w-node-b4d62e44-e78d-71ea-908f-439a88f65c5d-4ef3318a" href="mailto:divineinteriors.v@gmail.com" target="_blank" class="footer-info-item-title hidden-tab w-inline-block"><div class="txt txt-16 mb-txt-14">divineinteriors.v@gmail.com<br/>+91-9717740876</div></a><div class="line line-vertical left top"></div><div class="line line-horizital left right bot"></div></div><div id="w-node-ec209fda-4140-b2bf-5394-7c1f4ef331ee-4ef3318a" class="footer-info-item item2"><div class="footer-info-item-inner"><div class="footer-info-item-label"><div class="txt txt-font-mono txt-14 mb-txt-12">Enquiries</div></div><a href="mailto:divineinteriors.v@gmail.com" class="footer-info-item-title w-inline-block"><div class="txt txt-16 mb-txt-14">divineinteriors.v@gmail.com</div></a><div class="line line-horizital bot left right"></div></div><div class="footer-info-item-inner item2"><div class="footer-info-item-label"><div class="txt txt-font-mono txt-14 mb-txt-12">Phone</div></div><a href="tel:+919717740876" class="footer-info-item-title w-inline-block"><div class="txt txt-16 mb-txt-14">+91-9717740876</div></a><div class="line line-vertical left top"></div></div><div class="line line-vertical left top"></div></div><div id="w-node-ec209fda-4140-b2bf-5394-7c1f4ef33200-4ef3318a" class="footer-info-item item3"><div class="footer-info-item-label"><div class="txt txt-font-mono txt-14 mb-txt-12">Social</div></div><div class="footer-info-item-title-wrap"><a href="mailto:divineinteriors.v@gmail.com" target="_blank" class="footer-info-item-title w-inline-block"><div class="txt txt-16 mb-txt-14">Email</div></a><a href="https://wa.me/919717740876" target="_blank" class="footer-info-item-title w-inline-block"><div class="txt txt-16 mb-txt-14">WhatsApp</div></a><a href="https://www.instagram.com/divine.interiors.in" target="_blank" class="footer-info-item-title w-inline-block"><div class="txt txt-16 mb-txt-14">Instagram</div></a><a href="https://www.linkedin.com/company/divine-interiors-in" target="_blank" class="footer-info-item-title w-inline-block"><div class="txt txt-16 mb-txt-14">LinkedIn</div></a></div><div class="line line-vertical left top"></div><div class="line line-horizital left right bot"></div></div></div></div></div><div id="w-node-ec209fda-4140-b2bf-5394-7c1f4ef3320d-4ef3318a" class="footer-map-slot"><div class="footer-map-container"><div class="footer-map-header"><div class="footer-map-header-left"><span class="footer-map-dot"></span><span class="footer-map-title">Studio Location</span></div><a href="https://maps.google.com/?q=K2,+1068,+Durga+Vihar,+Devli,+Khanpur,+Delhi-110080" target="_blank" rel="noopener noreferrer" class="footer-map-directions">Directions ↗</a></div><div class="footer-map-frame-wrap"><iframe title="Divine Interiors Studio Map" src="https://www.openstreetmap.org/export/embed.html?bbox=77.2150%2C28.5000%2C77.2400%2C28.5160&amp;layer=mapnik&amp;marker=28.5080%2C77.2280" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div><div class="footer-map-footer"><span>Delhi-110080</span><span>[28.5080° N, 77.2280° E]</span></div></div></div><div class="line line-horizital bot left right"></div></div><div class="footer-copyright-wrap grid"><div id="w-node-ec209fda-4140-b2bf-5394-7c1f4ef33221-4ef3318a" class="footer-copyright"><div class="footer-copyright-txt"><div class="footer-copyright-txt-block w-richtext"><p>©2026 DIVINE INTERIORS. All rights reserved.</p></div></div><div class="line line-vertical right top hidden-tb"></div></div><div id="w-node-ec209fda-4140-b2bf-5394-7c1f4ef33225-4ef3318a" class="footer-policy"><a class='footer-policy-item w-inline-block' href="privacy-policy.html"><div class="line line-vertical left top"></div><div class="txt txt-16 mb-txt-12">Privacy Policy</div></a><a class='footer-policy-item w-inline-block' href="terms-and-conditions.html"><div class="line line-vertical left top"></div><div class="txt txt-16 mb-txt-12">Terms &amp; Conditions</div></a><a class='footer-policy-item w-inline-block' href="cookie-policy.html"><div class="line line-vertical left top"></div><div class="txt txt-16 mb-txt-12">Cookie Policy</div></a></div><div class="line line-horizital top left right"></div></div></div></footer></div></footer-wrap></div></div></main></div><script src="js/jquery-3.5.1.min.dc5e7f18c8.js"></script>
+</svg></div></div></button></div></form><div class="footer-form-success w-form-done"><div class="footer-form-success-inner"><div class="footer-form-success-title"><div class="heading h6 mb-h5">Thanks for reaching out!</div></div><div class="footer-form-success-sub"><div class="txt txt-16 txt-reg">We&#x27;ve received your information.<br/>Our team will reach out to you shortly!</div></div></div></div><div class="w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div></div><div class="line line-vertical left top"></div></div></div><div id="w-node-_35b68888-015e-8c8e-2f22-bde4cb8c5a57-4ef3318a" class="footer-body"><div class="footer-content-item"><div id="w-node-ec209fda-4140-b2bf-5394-7c1f4ef331af-4ef3318a" class="footer-menu"><div class="footer-menu-item item-right"><div class="footer-menu-item-label"><div class="txt txt-font-mono txt-14 mb-txt-12">Company</div></div><div class="footer-menu-item-link-wrap item-top"><a href="index.html" aria-current="page" class="footer-menu-item-link item-top w-inline-block w--current"><div class="txt txt-16 mb-txt-14">Home</div></a><a class='footer-menu-item-link item-top w-inline-block' href="#about"><div class="txt txt-16 mb-txt-14">About us</div></a><a class='footer-menu-item-link item-top w-inline-block' href="javascript:void(0)" data-open-contact="true" data-barba-prevent=""><div class="txt txt-16 mb-txt-14">Contact us</div></a></div><div class="line line-vertical left top"></div></div><div class="footer-menu-item"><div class="footer-menu-item-label"><div class="txt txt-font-mono txt-14 mb-txt-12">Services</div></div><div class="footer-menu-item-link-wrap"><a class='footer-menu-item-link w-inline-block' href="#services"><div class="txt txt-16 mb-txt-14">Civil &amp; Interiors</div></a><a class='footer-menu-item-link w-inline-block' href="#services"><div class="txt txt-16 mb-txt-14">MEP Engineering</div></a><a class='footer-menu-item-link w-inline-block' href="#services"><div class="txt txt-16 mb-txt-14">HVAC &amp; Facades</div></a><a class='footer-menu-item-link w-inline-block' href="#partnership"><div class="txt txt-16 mb-txt-14">Simta Astrix Partner</div></a></div><div class="line line-vertical left top"></div></div><div class="footer-menu-item"><div class="footer-menu-item-label"><div class="txt txt-font-mono txt-14 mb-txt-12">Portfolio</div></div><div class="footer-menu-item-link-wrap"><a class='footer-menu-item-link w-inline-block' href="#portfolio"><div class="txt txt-16 mb-txt-14">Our Projects</div></a><a class='footer-menu-item-link w-inline-block' href="#about"><div class="txt txt-16 mb-txt-14">About Us</div></a><a class='footer-menu-item-link w-inline-block' href="javascript:void(0)" data-open-contact="true" data-barba-prevent=""><div class="txt txt-16 mb-txt-14">Contact Us</div></a></div><div class="line line-vertical left top"></div></div></div><div class="line line-horizital bot left right footer-content-item-line"></div></div><div class="footer-content-item item-bot"><div id="w-node-ec209fda-4140-b2bf-5394-7c1f4ef331e4-4ef3318a" class="footer-info-wrap"><div id="w-node-ec209fda-4140-b2bf-5394-7c1f4ef331e5-4ef3318a" class="footer-info-item item1"><div class="footer-info-item-label"><div class="txt txt-font-mono txt-14 mb-txt-12">Address</div></div><a href="mailto:divineinteriors.v@gmail.com" target="_blank" class="footer-info-item-title w-inline-block"><div class="txt txt-16 mb-txt-14">K2, 1068, Durga Vihar, Devli,<br/>Khanpur, Delhi-110080</div></a><a id="w-node-b4d62e44-e78d-71ea-908f-439a88f65c5d-4ef3318a" href="mailto:divineinteriors.v@gmail.com" target="_blank" class="footer-info-item-title hidden-tab w-inline-block"><div class="txt txt-16 mb-txt-14">divineinteriors.v@gmail.com<br/>+91-9717740876</div></a><div class="line line-vertical left top"></div><div class="line line-horizital left right bot"></div></div><div id="w-node-ec209fda-4140-b2bf-5394-7c1f4ef331ee-4ef3318a" class="footer-info-item item2"><div class="footer-info-item-inner"><div class="footer-info-item-label"><div class="txt txt-font-mono txt-14 mb-txt-12">Enquiries</div></div><a href="mailto:divineinteriors.v@gmail.com" class="footer-info-item-title w-inline-block"><div class="txt txt-16 mb-txt-14">divineinteriors.v@gmail.com</div></a><div class="line line-horizital bot left right"></div></div><div class="footer-info-item-inner item2"><div class="footer-info-item-label"><div class="txt txt-font-mono txt-14 mb-txt-12">Phone</div></div><a href="tel:+919717740876" class="footer-info-item-title w-inline-block"><div class="txt txt-16 mb-txt-14">+91-9717740876</div></a><div class="line line-vertical left top"></div></div><div class="line line-vertical left top"></div></div><div id="w-node-ec209fda-4140-b2bf-5394-7c1f4ef33200-4ef3318a" class="footer-info-item item3"><div class="footer-info-item-label"><div class="txt txt-font-mono txt-14 mb-txt-12">Social</div></div><div class="footer-info-item-title-wrap"><a href="mailto:divineinteriors.v@gmail.com" target="_blank" class="footer-info-item-title w-inline-block"><div class="txt txt-16 mb-txt-14">Email</div></a><a href="https://wa.me/919717740876" target="_blank" class="footer-info-item-title w-inline-block"><div class="txt txt-16 mb-txt-14">WhatsApp</div></a><a href="https://www.instagram.com/divine.interiors.in" target="_blank" class="footer-info-item-title w-inline-block"><div class="txt txt-16 mb-txt-14">Instagram</div></a><a href="https://www.linkedin.com/company/divine-interiors-in" target="_blank" class="footer-info-item-title w-inline-block"><div class="txt txt-16 mb-txt-14">LinkedIn</div></a></div><div class="line line-vertical left top"></div><div class="line line-horizital left right bot"></div></div></div></div></div><div id="w-node-ec209fda-4140-b2bf-5394-7c1f4ef3320d-4ef3318a" class="footer-map-slot"><div class="footer-map-container"><div class="footer-map-header"><div class="footer-map-header-left"><span class="footer-map-dot"></span><span class="footer-map-title">Studio Location</span></div><a href="https://maps.google.com/?q=K2,+1068,+Durga+Vihar,+Devli,+Khanpur,+Delhi-110080" target="_blank" rel="noopener noreferrer" class="footer-map-directions">Directions ↗</a></div><div class="footer-map-frame-wrap"><iframe title="Divine Interiors Studio Map" src="https://www.openstreetmap.org/export/embed.html?bbox=77.2150%2C28.5000%2C77.2400%2C28.5160&amp;layer=mapnik&amp;marker=28.5080%2C77.2280" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div><div class="footer-map-footer"><span>Delhi-110080</span><span>[28.5080° N, 77.2280° E]</span></div></div></div><div class="line line-horizital bot left right"></div></div><div class="footer-copyright-wrap grid"><div id="w-node-ec209fda-4140-b2bf-5394-7c1f4ef33221-4ef3318a" class="footer-copyright"><div class="footer-copyright-txt"><div class="footer-copyright-txt-block w-richtext"><p>©2026 DIVINE INTERIORS. All rights reserved.</p></div></div><div class="line line-vertical right top hidden-tb"></div></div><div id="w-node-ec209fda-4140-b2bf-5394-7c1f4ef33225-4ef3318a" class="footer-policy"><a class='footer-policy-item w-inline-block' href="privacy-policy.html"><div class="line line-vertical left top"></div><div class="txt txt-16 mb-txt-12">Privacy Policy</div></a><a class='footer-policy-item w-inline-block' href="terms-and-conditions.html"><div class="line line-vertical left top"></div><div class="txt txt-16 mb-txt-12">Terms &amp; Conditions</div></a><a class='footer-policy-item w-inline-block' href="cookie-policy.html"><div class="line line-vertical left top"></div><div class="txt txt-16 mb-txt-12">Cookie Policy</div></a></div><div class="line line-horizital top left right"></div></div></div></footer></div></footer-wrap></div></div></main></div><script src="js/jquery-3.5.1.min.dc5e7f18c8.js"></script>
 <script src="js/webflow.a0aa6ca1.b7683852b8a60d8e.js"></script>
 <script src="js/lenis.min.js"></script>
 <script src="js/gsap.min.js"></script>
