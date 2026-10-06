@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+function initServices() {
   const services = [
     {
       label: 'CIVIL AND INTERIOR',
@@ -49,4 +49,38 @@ document.addEventListener('DOMContentLoaded', () => {
       imgInner.innerHTML = `<img src="${service.image}" alt="${service.title}" class="service-art-img" loading="lazy" />`;
     }
   });
-});
+
+  // Interactive Signature Projects Accordion & Image Switcher
+  const faqItems = document.querySelectorAll('.home-usecase-faq-item');
+  const imgItems = document.querySelectorAll('.home-usecase-img-item');
+  if (faqItems.length && imgItems.length) {
+    function activateProject(targetIdx) {
+      faqItems.forEach((item, i) => {
+        item.classList.toggle('active', i === targetIdx);
+        const sub = item.querySelector('.home-usecase-faq-item-sub');
+        if (sub) {
+          sub.style.display = i === targetIdx ? 'block' : 'none';
+        }
+      });
+      imgItems.forEach((img, i) => {
+        img.classList.toggle('active', i === targetIdx);
+      });
+    }
+
+    faqItems.forEach((item, idx) => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        activateProject(idx);
+      });
+      item.addEventListener('mouseenter', () => activateProject(idx));
+    });
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initServices);
+} else {
+  initServices();
+}
+
+
