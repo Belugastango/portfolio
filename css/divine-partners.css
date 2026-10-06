@@ -236,6 +236,10 @@
 
 /* Responsive */
 @media screen and (max-width: 991px) {
+  .home-intro {
+    min-height: 0 !important;
+    height: auto !important;
+  }
   .home-intro-partner-wrap {
     margin-left: 0 !important;
   }

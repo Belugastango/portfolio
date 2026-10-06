@@ -108,9 +108,12 @@
   }
 
   function closeMobileMenuIfOpen() {
+    if (typeof window.closeDivineMobileNav === 'function') {
+      window.closeDivineMobileNav();
+    }
     const menuBtn = document.querySelector('.header-menu-btn');
     if (menuBtn && menuBtn.classList.contains('active')) {
-      menuBtn.click();
+      menuBtn.classList.remove('active');
     }
   }
 
@@ -250,6 +253,44 @@
     doScroll();
   }
 
+  function scrollToPartnership() {
+    const p = document.getElementById('partnership') || document.querySelector('.simta-partnership');
+    const mi = document.querySelector('.main-inner');
+    if (!p) return;
+
+    const offset = getHeaderOffset();
+    let attempts = 0;
+    const doScroll = () => {
+      attempts++;
+      if (window.lenis && typeof window.lenis.scrollTo === 'function') {
+        try {
+          window.lenis.scrollTo(p, { offset: -offset + 8, immediate: true });
+        } catch (_) {}
+      }
+      p.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (mi) {
+        const miRect = mi.getBoundingClientRect();
+        const pRect = p.getBoundingClientRect();
+        const targetTop = mi.scrollTop + (pRect.top - miRect.top) - offset + 8;
+        if (targetTop > 100) {
+          mi.scrollTop = targetTop;
+        }
+      }
+      const pRect = p.getBoundingClientRect();
+      const winTarget = window.scrollY + pRect.top - offset + 8;
+      if (winTarget > 100) {
+        window.scrollTo(0, winTarget);
+      }
+      if (attempts < 15) {
+        const remaining = p.getBoundingClientRect().top - offset;
+        if (Math.abs(remaining) > 30) {
+          setTimeout(doScroll, 80);
+        }
+      }
+    };
+    doScroll();
+  }
+
   function scrollToHome() {
     const mi = document.querySelector('.main-inner');
     if (window.lenis && typeof window.lenis.scrollTo === 'function') {
@@ -267,7 +308,7 @@
     const shouldOpen = sessionStorage.getItem('playShutterOpen') === 'true';
     const hash = window.location.hash;
 
-    if (hash === '#services' || hash === '#portfolio' || hash === '#about') {
+    if (hash === '#services' || hash === '#portfolio' || hash === '#about' || hash === '#partnership') {
       const loader = document.querySelector('.loading');
       if (loader) {
         loader.style.display = 'none';
@@ -283,6 +324,8 @@
       } else if (hash === '#about') {
         scrollToAbout();
         updateActiveNav('about');
+      } else if (hash === '#partnership') {
+        scrollToPartnership();
       }
     }
 
@@ -301,6 +344,8 @@
         scrollToPortfolio();
       } else if (hash === '#about') {
         scrollToAbout();
+      } else if (hash === '#partnership') {
+        scrollToPartnership();
       } else {
         scrollToHome();
       }
@@ -321,6 +366,8 @@
     } else if (hash === '#about') {
       scrollToAbout();
       updateActiveNav('about');
+    } else if (hash === '#partnership') {
+      scrollToPartnership();
     } else if (hash === '#home' || !hash) {
       scrollToHome();
       updateActiveNav('home');
@@ -347,6 +394,11 @@
       setTimeout(scrollToAbout, 800);
       setTimeout(scrollToAbout, 1500);
       updateActiveNav('about');
+    } else if (hash === '#partnership') {
+      setTimeout(scrollToPartnership, 100);
+      setTimeout(scrollToPartnership, 350);
+      setTimeout(scrollToPartnership, 800);
+      setTimeout(scrollToPartnership, 1500);
     }
   });
 
@@ -468,6 +520,30 @@
       }
     }
 
+    // Partnership Shutter Transition Handler
+    function handlePartnershipClick(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      closeMobileMenuIfOpen();
+
+      const p = document.getElementById('partnership') || document.querySelector('.simta-partnership');
+      if (p) {
+        playShutterTransition(() => {
+          scrollToPartnership();
+          if (history.pushState) {
+            history.pushState(null, null, '#partnership');
+          }
+        });
+      } else {
+        sessionStorage.setItem('playShutterOpen', 'true');
+        playShutterClose(() => {
+          window.location.href = 'index.html#partnership';
+        });
+      }
+    }
+
     // Contact Us Navigation with Shutter Transition
     function handleContactClick(e) {
       if (e) {
@@ -513,12 +589,176 @@
       link.addEventListener('click', handleAboutClick);
     });
 
+    // Bind partnership triggers
+    const partnershipLinks = document.querySelectorAll('a[href="#partnership"], a[href="index.html#partnership"], a[href$="#partnership"]');
+    partnershipLinks.forEach(link => {
+      link.setAttribute('data-barba-prevent', '');
+      link.addEventListener('click', handlePartnershipClick);
+    });
+
     // Bind contact triggers
     const contactLinks = document.querySelectorAll('#nav-contact-link, #nav-contact-mobile-link, a[href="contact-us.html"], a[href="/contact-us"], [data-open-contact="true"]');
     contactLinks.forEach(link => {
       link.setAttribute('data-barba-prevent', '');
       link.addEventListener('click', handleContactClick);
     });
+
+    // Initialize Mobile Navigation Drawer & Hamburger Trigger
+    initMobileNav({
+      handleHomeClick,
+      handleServicesClick,
+      handlePortfolioClick,
+      handlePartnershipClick,
+      handleAboutClick,
+      handleContactClick
+    });
+  }
+
+  const MOBILE_NAV_HTML = `
+    <div id="divine-mobile-nav" class="divine-mobile-nav" aria-hidden="true">
+      <div class="divine-mobile-nav-backdrop" id="divine-mobile-backdrop"></div>
+      <div class="divine-mobile-nav-panel" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+        <div class="divine-mobile-nav-top">
+          <div class="divine-mobile-nav-status">
+            <span class="divine-mobile-nav-dot"></span>
+            <span>STUDIO DIRECT // NEW DELHI</span>
+          </div>
+          <button type="button" class="divine-mobile-nav-close" id="divine-mobile-close" aria-label="Close Navigation">
+            <span>CLOSE</span>
+            <span style="font-weight: 700;">✕</span>
+          </button>
+        </div>
+
+        <nav class="divine-mobile-nav-list">
+          <a href="#home" class="divine-mobile-nav-link" data-mobile-target="home">
+            <span class="divine-mobile-nav-num">[01]</span>
+            <span class="divine-mobile-nav-txt">HOME</span>
+            <span class="divine-mobile-nav-arr">→</span>
+          </a>
+          <a href="#services" class="divine-mobile-nav-link" data-mobile-target="services">
+            <span class="divine-mobile-nav-num">[02]</span>
+            <span class="divine-mobile-nav-txt">SERVICES</span>
+            <span class="divine-mobile-nav-arr">→</span>
+          </a>
+          <a href="#portfolio" class="divine-mobile-nav-link" data-mobile-target="portfolio">
+            <span class="divine-mobile-nav-num">[03]</span>
+            <span class="divine-mobile-nav-txt">PORTFOLIO</span>
+            <span class="divine-mobile-nav-arr">→</span>
+          </a>
+          <a href="#partnership" class="divine-mobile-nav-link" data-mobile-target="partnership">
+            <span class="divine-mobile-nav-num">[04]</span>
+            <span class="divine-mobile-nav-txt">SIMTA ASTRIX</span>
+            <span class="divine-mobile-nav-badge">PARTNER</span>
+            <span class="divine-mobile-nav-arr">→</span>
+          </a>
+          <a href="#about" class="divine-mobile-nav-link" data-mobile-target="about">
+            <span class="divine-mobile-nav-num">[05]</span>
+            <span class="divine-mobile-nav-txt">ABOUT US</span>
+            <span class="divine-mobile-nav-arr">→</span>
+          </a>
+          <a href="contact-us.html" class="divine-mobile-nav-link" data-mobile-target="contact">
+            <span class="divine-mobile-nav-num">[06]</span>
+            <span class="divine-mobile-nav-txt">CONTACT US</span>
+            <span class="divine-mobile-nav-arr">→</span>
+          </a>
+        </nav>
+
+        <div class="divine-mobile-nav-actions">
+          <a href="tel:+919717740876" class="divine-mobile-action-btn action-call">
+            <span class="action-btn-tag">CALL STUDIO</span>
+            <span class="action-btn-val">+91 97177 40876</span>
+          </a>
+          <a href="https://wa.me/919717740876?text=Hi%20Divine%20Interiors,%20I%20would%20like%20to%20discuss%20an%20interior%20architecture%20project." target="_blank" rel="noopener noreferrer" class="divine-mobile-action-btn action-wa">
+            <span class="action-btn-tag">WHATSAPP</span>
+            <span class="action-btn-val">Instant Chat ↗</span>
+          </a>
+        </div>
+
+        <div class="divine-mobile-nav-footer">
+          <span>PAN-INDIA FIT-OUTS</span>
+          <span>[28.5080° N, 77.2280° E]</span>
+        </div>
+      </div>
+    </div>
+  `;
+
+  function initMobileNav(handlers) {
+    if (!document.getElementById('divine-mobile-nav')) {
+      const container = document.createElement('div');
+      container.innerHTML = MOBILE_NAV_HTML.trim();
+      document.body.appendChild(container.firstElementChild);
+    }
+
+    const mobileNav = document.getElementById('divine-mobile-nav');
+    const menuBtn = document.querySelector('.header-menu-btn');
+    const closeBtn = document.getElementById('divine-mobile-close');
+    const backdrop = document.getElementById('divine-mobile-backdrop');
+
+    function openNav() {
+      if (!mobileNav) return;
+      mobileNav.classList.add('is-open');
+      mobileNav.setAttribute('aria-hidden', 'false');
+      if (menuBtn) menuBtn.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeNav() {
+      if (!mobileNav) return;
+      mobileNav.classList.remove('is-open');
+      mobileNav.setAttribute('aria-hidden', 'true');
+      if (menuBtn) menuBtn.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function toggleNav(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      if (mobileNav && mobileNav.classList.contains('is-open')) {
+        closeNav();
+      } else {
+        openNav();
+      }
+    }
+
+    if (menuBtn) {
+      menuBtn.addEventListener('click', toggleNav);
+    }
+    if (closeBtn) closeBtn.addEventListener('click', closeNav);
+    if (backdrop) backdrop.addEventListener('click', closeNav);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileNav && mobileNav.classList.contains('is-open')) {
+        closeNav();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 991 && mobileNav && mobileNav.classList.contains('is-open')) {
+        closeNav();
+      }
+    });
+
+    const links = mobileNav.querySelectorAll('[data-mobile-target]');
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        closeNav();
+
+        const target = link.getAttribute('data-mobile-target');
+        if (target === 'home' && handlers && handlers.handleHomeClick) handlers.handleHomeClick();
+        else if (target === 'services' && handlers && handlers.handleServicesClick) handlers.handleServicesClick();
+        else if (target === 'portfolio' && handlers && handlers.handlePortfolioClick) handlers.handlePortfolioClick();
+        else if (target === 'partnership' && handlers && handlers.handlePartnershipClick) handlers.handlePartnershipClick();
+        else if (target === 'about' && handlers && handlers.handleAboutClick) handlers.handleAboutClick();
+        else if (target === 'contact' && handlers && handlers.handleContactClick) handlers.handleContactClick();
+      });
+    });
+
+    window.openDivineMobileNav = openNav;
+    window.closeDivineMobileNav = closeNav;
   }
 
   if (document.readyState === 'loading') {
