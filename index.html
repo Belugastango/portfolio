@@ -3281,11 +3281,51 @@
       <div class="line line-horizital top left right"></div>
       <div class="w-layout-blockcontainer container w-container">
         <div class="di-portfolio-head">
-          <div class="di-portfolio-title">
-            <h2 class="heading h2 tb-h3 mb-h2">OUR FEATURED<br/>PROJECTS</h2>
+          <div class="di-portfolio-head-left">
+            <div class="di-portfolio-tag txt-font-mono">[ 04 / SELECTED WORKS ]</div>
+            <h1 class="di-portfolio-big-title">PORTFOLIO</h1>
           </div>
-          <div class="di-portfolio-sub">
-            <div class="txt txt-16">63 authentic architectural photographs across 6 flagship retail, hospitality, and bespoke residential projects executed with turnkey precision across India.</div>
+          <div class="di-portfolio-head-right">
+            <div class="di-portfolio-building-card" id="diPortfolioBuildingCard" title="Hover or scroll to transform concept to built reality">
+              <div class="di-portfolio-building-frame">
+                <!-- Precision architectural corner ticks -->
+                <div class="di-building-corner top-left">+</div>
+                <div class="di-building-corner top-right">+</div>
+                <div class="di-building-corner bot-left">+</div>
+                <div class="di-building-corner bot-right">+</div>
+
+                <div class="di-portfolio-ink-mask-wrap" id="portfolioBuildingAnimWrap">
+                  <!-- Base wireframe building image (Heron AI original) -->
+                  <div class="di-portfolio-ink-base">
+                    <img src="assets/6a69a23dcc24456128e2afe3_image%20345.avif" alt="Architectural wireframe sketch" class="di-portfolio-building-img" />
+                  </div>
+                  <!-- Ink mask layer with displacement filter revealing rendered building with orange sun circle -->
+                  <div class="di-portfolio-ink-reveal">
+                    <svg width="100%" height="100%" viewBox="0 0 1000 1000" preserveAspectRatio="none" class="di-portfolio-building-svg">
+                      <defs>
+                        <mask id="portfolioInkMaskPath" maskContentUnits="userSpaceOnUse">
+                          <path id="portfolioBuildingMaskPath" fill="white" style="filter: url(#portfolioDisplacementFilter);" d="M 0 -80 Q 500 -80 1000 -80 L 1000 0 L 0 0 Z"></path>
+                        </mask>
+                        <filter id="portfolioDisplacementFilter">
+                          <feTurbulence type="fractalNoise" baseFrequency="0.045 0.055" numOctaves="4" seed="5" result="noise"></feTurbulence>
+                          <feDisplacementMap in="SourceGraphic" in2="noise" scale="100" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+                          <feGaussianBlur stdDeviation="1.8" result="blurred"></feGaussianBlur>
+                          <feComponentTransfer in="blurred" result="contrast">
+                            <feFuncA type="linear" slope="2.2" intercept="-0.6"></feFuncA>
+                          </feComponentTransfer>
+                        </filter>
+                      </defs>
+                      <image href="assets/6a63248e9e2e27200fb0efcf_609974a6d6c317e394b965e56b552669_image%20330.avif" x="0" y="0" width="100%" height="100%" mask="url(#portfolioInkMaskPath)"></image>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="di-building-badge">
+                  <span class="di-building-pulse-dot"></span>
+                  <span class="txt-font-mono txt-12">CONCEPT &rarr; BUILT REALITY</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -4863,21 +4903,164 @@
     position: relative;
   }
   .di-portfolio-head {
-    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 48px;
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+    position: relative;
   }
-  .di-portfolio-label {
-    margin-bottom: 16px;
-    color: #fa3600 !important;
-    letter-spacing: 0.1em;
+  .di-portfolio-head-left {
+    flex: 1 1 auto;
+    min-width: 0;
   }
-  .di-portfolio-title h2 {
+  .di-portfolio-tag {
+    color: #fa3600;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    margin-bottom: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .di-portfolio-big-title {
+    font-family: 'BTGrotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: clamp(60px, 11vw, 150px);
+    font-weight: 800;
+    line-height: 0.86;
+    letter-spacing: -0.04em;
     color: #ffffff !important;
-    margin-bottom: 16px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
   }
-  .di-portfolio-sub {
-    max-width: 680px;
-    color: rgba(255,255,255,0.75) !important;
-    line-height: 1.6;
+  .di-portfolio-head-right {
+    flex: 0 0 auto;
+  }
+  .di-portfolio-building-card {
+    position: relative;
+    width: 290px;
+    height: 290px;
+    background: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 4px;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    user-select: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .di-portfolio-building-card:hover {
+    border-color: rgba(250, 54, 0, 0.5);
+    box-shadow: 0 24px 56px rgba(0, 0, 0, 0.85);
+  }
+  .di-portfolio-building-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 3px;
+  }
+  .di-building-corner {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 1;
+    z-index: 5;
+    pointer-events: none;
+  }
+  .di-building-corner.top-left { top: 8px; left: 10px; }
+  .di-building-corner.top-right { top: 8px; right: 10px; }
+  .di-building-corner.bot-left { bottom: 8px; left: 10px; }
+  .di-building-corner.bot-right { bottom: 8px; right: 10px; }
+  .di-portfolio-ink-mask-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fbfbf9;
+  }
+  .di-portfolio-ink-base {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .di-portfolio-building-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .di-portfolio-ink-reveal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .di-portfolio-building-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .di-building-badge {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10, 10, 10, 0.84);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    padding: 4px 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 4;
+    color: #fff;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+  .di-building-pulse-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fa3600;
+    box-shadow: 0 0 6px #fa3600;
+    animation: diDotPulse 1.8s infinite ease-in-out;
+  }
+  @keyframes diDotPulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.2); }
+  }
+  @media screen and (max-width: 991px) {
+    .di-portfolio-head {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+    }
+    .di-portfolio-big-title {
+      font-size: clamp(48px, 14vw, 84px);
+      line-height: 0.92;
+    }
+    .di-portfolio-head-right {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .di-portfolio-building-card {
+      width: min(100%, 300px);
+      height: auto;
+      aspect-ratio: 1 / 1;
+      margin: 0 auto;
+    }
   }
   .di-filter-wrap {
     display: flex;
@@ -5400,6 +5583,7 @@
 <script src="js/divine-hero.js"></script>
 <script src="js/divine-partners.js?v=4"></script>
 <script src="js/divine-drawer.js"></script>
+<script src="js/divine-portfolio-anim.js"></script>
 <!--<script type="module" src="http://localhost:3000/@vite/client"></script>
 <script type="module" src="http://localhost:3000/src/main.js"></script>
 <script src="js/main.js" type="module"></script>--><script data-resources-saver-cleanup="branding">(()=>{const c=()=>document.querySelectorAll("#__framer-badge-container,.__framer-badge,.w-webflow-badge").forEach(e=>e.remove());c();document.addEventListener("DOMContentLoaded",c,{once:true});new MutationObserver(c).observe(document.documentElement,{childList:true,subtree:true});})();</script></body></html>
