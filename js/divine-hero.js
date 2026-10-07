@@ -1,11 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const introSource = 'assets/6a63248e9e2e27200fb0efcf_609974a6d6c317e394b965e56b552669_image%20330.avif';
+  const introWireframe = 'assets/6a69a23dcc24456128e2afe3_image%20345.avif';
+  const introRendered = 'assets/6a63248e9e2e27200fb0efcf_609974a6d6c317e394b965e56b552669_image%20330.avif';
+
   const setIntroArtwork = () => {
     document.querySelectorAll('.home-intro-img .ink-mask-img.main img').forEach((image) => {
-      image.style.display = 'none';
+      if (image.getAttribute('src') !== introWireframe) {
+        image.setAttribute('src', introWireframe);
+      }
+      image.style.display = 'block';
     });
     document.querySelectorAll('.home-intro-img image').forEach((image) => {
-      image.setAttribute('href', introSource);
+      if (image.getAttribute('href') !== introRendered) {
+        image.setAttribute('href', introRendered);
+      }
     });
   };
 

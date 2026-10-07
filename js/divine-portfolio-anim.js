@@ -1,12 +1,12 @@
 /**
- * Divine Interiors - Portfolio Building Ink-Mask Animation
- * Morphing wireframe building into concrete building with sun circle
+ * DIVINE INTERIORS - Landing Page Building Ink-Mask Animation
+ * Smoothly morphs wireframe building sketch into concrete building with orange sun circle on scroll & hover
  */
 (function() {
-  function initPortfolioBuildingAnim() {
-    const card = document.getElementById('diPortfolioBuildingCard');
-    const maskPath = document.getElementById('portfolioBuildingMaskPath');
-    if (!card || !maskPath) return;
+  function initBuildingAnim() {
+    const container = document.getElementById('homeIntroBuildingAnim') || document.querySelector('.home-intro-img');
+    const maskPath = document.getElementById('homeIntroMaskPath') || (container ? container.querySelector('path.mask') : null);
+    if (!container || !maskPath) return;
 
     let targetProgress = 0;
     let currentProgress = -1;
@@ -14,7 +14,7 @@
 
     function updateMaskPath(p) {
       const clamped = Math.max(0, Math.min(1, p));
-      // Map 0 -> 1 to y positions with padding for turbulence distortion
+      // Map 0 -> 1 to y coordinates with comfortable padding for turbulence distortion
       const y1 = -80 + (1180 - (-80)) * clamped;
       const yctrl = -80 + (1420 - (-80)) * clamped;
       const y2 = -80 + (1180 - (-80)) * clamped;
@@ -22,44 +22,45 @@
     }
 
     function getScrollProgress() {
-      const rect = card.getBoundingClientRect();
+      const rect = container.getBoundingClientRect();
       const vh = window.innerHeight || 800;
-      // Start reveal when top of card is at 88% viewport, full reveal by 30% viewport
-      const start = vh * 0.88;
-      const end = vh * 0.30;
+      // Start revealing when top of intro image enters around 85% of viewport
+      // Complete reveal when top is around 25% of viewport
+      const start = vh * 0.85;
+      const end = vh * 0.25;
       const p = (start - rect.top) / (start - end);
       return Math.max(0, Math.min(1, p));
     }
 
-    card.addEventListener('pointerenter', () => {
+    container.addEventListener('pointerenter', () => {
       isHovering = true;
     });
 
-    card.addEventListener('pointermove', (e) => {
+    container.addEventListener('pointermove', (e) => {
       isHovering = true;
-      const rect = card.getBoundingClientRect();
+      const rect = container.getBoundingClientRect();
       const relY = (e.clientY - rect.top) / rect.height;
       targetProgress = Math.max(0, Math.min(1, relY));
     });
 
-    card.addEventListener('pointerleave', () => {
+    container.addEventListener('pointerleave', () => {
       isHovering = false;
     });
 
-    card.addEventListener('touchmove', (e) => {
+    container.addEventListener('touchmove', (e) => {
       if (e.touches && e.touches[0]) {
-        const rect = card.getBoundingClientRect();
+        const rect = container.getBoundingClientRect();
         const relY = (e.touches[0].clientY - rect.top) / rect.height;
         targetProgress = Math.max(0, Math.min(1, relY));
       }
     }, { passive: true });
 
-    card.addEventListener('click', () => {
+    container.addEventListener('click', () => {
       targetProgress = targetProgress > 0.5 ? 0.05 : 0.95;
     });
 
     function tick() {
-      const rect = card.getBoundingClientRect();
+      const rect = container.getBoundingClientRect();
       const vh = window.innerHeight || 800;
       const inView = rect.bottom > -100 && rect.top < vh + 100;
 
@@ -85,8 +86,8 @@
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initPortfolioBuildingAnim);
+    document.addEventListener('DOMContentLoaded', initBuildingAnim);
   } else {
-    initPortfolioBuildingAnim();
+    initBuildingAnim();
   }
 })();
